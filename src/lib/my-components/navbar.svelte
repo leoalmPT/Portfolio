@@ -39,58 +39,63 @@
 
 <div class="w-full border-b-2 p-2">
     <div class="w-full container mx-auto">
-        <NavigationMenu.Root>
-            <NavigationMenu.List>
-
-                <NavigationMenu.Item>
-                    <NavigationMenu.Link>
-                        {#snippet child()}
-                            <a href="/" class={navigationMenuTriggerStyle()}>
-                                <CodeXml/> <span class="ml-2">Leonard Almeida</span>
-                            </a>
-                        {/snippet}
-                    </NavigationMenu.Link>
-                </NavigationMenu.Item>
-
-                <NavigationMenu.Item>
-                    <NavigationMenu.Link>
-                        {#snippet child()}
-                            <a href="/journey" class={navigationMenuTriggerStyle()}>Journey</a>
-                        {/snippet}
-                    </NavigationMenu.Link>
-                </NavigationMenu.Item>
-
-                <NavigationMenu.Item>
-                    <NavigationMenu.Trigger>Track Record</NavigationMenu.Trigger>
-                    <NavigationMenu.Content>
-                        <ul
-                        class="grid w-[400px] gap-2 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]"
-                        >
-                            {#each record as { title, href, description }}
-                                <NavigationMenu.Link href={href}>
-                                    <div class="font-medium">{title}</div>
-                                    <div class="text-muted-foreground">
-                                        {description}
-                                    </div>
-                                </NavigationMenu.Link>
-                            {/each}
-                        </ul>
-                    </NavigationMenu.Content>
-                </NavigationMenu.Item>
-
-                <NavigationMenu.Item>
-                    <Button onclick={toggleMode} variant="outline" size="icon">
-                        <SunIcon
-                            class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
-                        />
-                        <MoonIcon
-                            class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
-                        />
-                        <span class="sr-only">Toggle theme</span>
-                    </Button>
-                </NavigationMenu.Item>
-
+        <NavigationMenu.Root class="w-full max-w-none" viewport={false}>
+            <div class="w-full flex items-center justify-between sm:grid sm:grid-cols-3">
+            <NavigationMenu.List class="justify-self-start">
+            <NavigationMenu.Item>
+                <NavigationMenu.Link>
+                    {#snippet child()}
+                        <a href="/" class={navigationMenuTriggerStyle()}>
+                            <CodeXml/> <span class="ml-2">Leonard Almeida</span>
+                        </a>
+                    {/snippet}
+                </NavigationMenu.Link>
+            </NavigationMenu.Item>
             </NavigationMenu.List>
-        </NavigationMenu.Root>
-    </div>
+
+            <NavigationMenu.List class="justify-self-center">
+            <NavigationMenu.Item>
+                <NavigationMenu.Link>
+                    {#snippet child()}
+                        <a href="/journey" class={navigationMenuTriggerStyle()}>Journey</a>
+                    {/snippet}
+                </NavigationMenu.Link>
+            </NavigationMenu.Item>
+
+            <NavigationMenu.Item>
+                <NavigationMenu.Trigger>Track Record</NavigationMenu.Trigger>
+                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px]">
+                    <ul
+                        class="grid gap-2 p-2 w-[250px] lg:w-[600px] lg:grid-cols-2"
+                    >
+                        {#each record as { title, href, description }}
+                            <NavigationMenu.Link href={href}>
+                                <div class="font-medium">{title}</div>
+                                <div class="text-muted-foreground">
+                                    {description}
+                                </div>
+                            </NavigationMenu.Link>
+                        {/each}
+                    </ul>
+                </NavigationMenu.Content>
+            </NavigationMenu.Item>
+            </NavigationMenu.List>
+
+            <NavigationMenu.List class="ml-auto justify-self-end">
+            <NavigationMenu.Item>
+                <Button onclick={toggleMode} variant="outline" size="icon">
+                    <SunIcon
+                        class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
+                    />
+                    <MoonIcon
+                        class="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 !transition-all dark:rotate-0 dark:scale-100"
+                    />
+                    <span class="sr-only">Toggle theme</span>
+                </Button>
+            </NavigationMenu.Item>
+            </NavigationMenu.List>
+
+        </div>
+    </NavigationMenu.Root>
+</div>
 </div>
