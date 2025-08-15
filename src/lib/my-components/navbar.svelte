@@ -63,7 +63,9 @@
             </NavigationMenu.Item>
 
             <NavigationMenu.Item>
-                <NavigationMenu.Trigger>Track Record</NavigationMenu.Trigger>
+                <NavigationMenu.Trigger class="bg-transparent">
+                    Track Record
+                </NavigationMenu.Trigger>
                 <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px]">
                     <ul
                         class="grid gap-2 p-2 w-[250px] lg:w-[600px] lg:grid-cols-2"
@@ -83,7 +85,7 @@
 
             <NavigationMenu.List class="ml-auto justify-self-end">
             <NavigationMenu.Item>
-                <Button onclick={toggleMode} variant="outline" size="icon">
+                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent">
                     <SunIcon
                         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
                     />
