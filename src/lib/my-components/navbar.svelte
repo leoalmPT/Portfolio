@@ -67,7 +67,7 @@
                 <NavigationMenu.Trigger class="bg-transparent text-base">
                     Track Record
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px] !bg-popover/80">
+                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px]">
                     <ul
                         class="grid gap-2 p-2 w-[250px] lg:w-[600px] lg:grid-cols-2"
                     >

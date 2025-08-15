@@ -5,22 +5,62 @@
     "summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     "socials": {
         "website": "https://leoalmpt.pages.dev/",
-        "linkedin": "https://www.linkedin.com/in/leoalmpt",
-        "github": "https://github.com/leoalmpt",
-        "orcid": "https://orcid.org/0009-0006-5669-2378",
-        "researchgate": "https://www.researchgate.net/profile/Leonardo-Almeida-12",
+        "LinkedIn": "https://www.linkedin.com/in/leoalmpt",
+        "GitHub": "https://github.com/leoalmpt",
+        "ORCID": "https://orcid.org/0009-0006-5669-2378",
+        "ResearchGate": "https://www.researchgate.net/profile/Leonardo-Almeida-12",
         "cv": "/CV.pdf"
     },
     "skills": {
-        "languages": [
+        "Programming Languages": [
             "Python",
-            "C/C++",
-            "Java"
+            "C",
+            "Cpp",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "Lua"
         ],
-        "ml": [
+        "CI/CD & Cloud": [
+            "Git",
+            "GithubActions",
+            "Docker",
+            "UV",
+            "Maven",
+            "Kubernetes",
+            "Proxmox",
+            "Terraform",
+            "AWS",
+            "Cloudflare"
+        ],
+        "Machine Learning": [
             "TensorFlow",
+            "Keras",
             "PyTorch",
-            "scikit-learn"
+            "Scikit-learn",
+            "Pandas",
+            "NumPy",
+            "OpenCV"
+        ],
+        "Full Stack": [
+            "HTML",
+            "CSS",
+            "React",
+            "Svelte",
+            "Angular",
+            "Django",
+            "Spring Boot",
+            "FastAPI",
+            "Flask"
+        ],
+        "Data & Messaging": [
+            "PostgreSQL",
+            "MongoDB",
+            "Redis",
+            "RabbitMQ",
+            "Kafka",
+            "MQTT",
+            "MPI"
         ]
     },
     "education": [

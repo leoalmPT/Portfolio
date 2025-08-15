@@ -1,8 +1,6 @@
 {
     "website": "My portfolio",
-    "github": "Github",
-    "linkedin": "LinkedIn",
-    "researchgate": "ResearchGate",
-    "orcid": "ORCID",
-    "cv": "My Curriculum Vitae"
+    "cv": "My Curriculum Vitae",
+    "Cpp": "C++",
+    "GithubActions": "GitHub Actions"
 }

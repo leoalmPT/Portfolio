@@ -5,6 +5,7 @@ Docs:
 - https://www.shadcn-svelte.com/docs
 - https://lucide.dev/icons/
 - https://www.svgrepo.com/
+- https://dashboardicons.com/
 
 Run:
 ```
