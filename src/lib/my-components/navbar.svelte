@@ -4,6 +4,7 @@
     import SunIcon from "@lucide/svelte/icons/sun";
     import MoonIcon from "@lucide/svelte/icons/moon";
     import CodeXml from "@lucide/svelte/icons/code-xml";
+    import { name } from "$lib/data/home.json";
 
     import { toggleMode } from "mode-watcher";
     import { Button } from "$lib/components/ui/button/index.js";
@@ -46,7 +47,7 @@
                 <NavigationMenu.Link>
                     {#snippet child()}
                         <a href="/" class={navigationMenuTriggerStyle()}>
-                            <CodeXml/> <span class="ml-2">Leonard Almeida</span>
+                            <CodeXml/> <span class="ml-2">{name}</span>
                         </a>
                     {/snippet}
                 </NavigationMenu.Link>

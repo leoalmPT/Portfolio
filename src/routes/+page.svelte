@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Logo from "$lib/my-components/logo.svelte";
+    import info from "$lib/data/home.json";
 </script>
 
-<Logo name="orcid" href="https://orcid.org/0009-0006-5669-2378" new_window/>
-
-Home
+<div class="flex">
+    {#each Object.entries(info.socials) as [name, href]}
+        <Logo name={name} href={href} new_window/>
+    {/each}
+</div>a 

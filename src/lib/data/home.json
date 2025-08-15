@@ -1,0 +1,23 @@
+{
+    "name": "Leonardo Almeida",
+    "summary": "....",
+    "socials": {
+        "website": "https://leoalmpt.pages.dev/",
+        "linkedin": "https://www.linkedin.com/in/leoalmpt",
+        "github": "https://github.com/leoalmpt",
+        "orcid": "https://orcid.org/0009-0006-5669-2378",
+        "researchgate": "https://www.researchgate.net/profile/Leonardo-Almeida-12"
+    },
+    "skills": {
+        "languages": [
+            "Python",
+            "C/C++",
+            "Java"
+        ],
+        "ml": [
+            "TensorFlow",
+            "PyTorch",
+            "scikit-learn"
+        ]
+    }
+}
