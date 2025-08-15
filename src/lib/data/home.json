@@ -22,5 +22,19 @@
             "PyTorch",
             "scikit-learn"
         ]
-    }
+    },
+    "education": [
+        {
+            "degree": "Masters",
+            "area": "Computer Science and Engineering",
+            "institution": "University of Aveiro",
+            "date": "Sept 2023 to July 2025"
+        },
+        {
+            "degree": "Bachelors",
+            "area": "Computer Science and Engineering",
+            "institution": "University of Aveiro",
+            "date": "Sept 2020 to July 2023"
+        }
+    ]
 }

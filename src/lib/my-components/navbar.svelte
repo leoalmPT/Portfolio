@@ -38,7 +38,7 @@
     ];
 </script>
 
-<div class="w-full p-2 border-b-2">
+<div class="w-full p-2 border-b-2 bg-background/50 backdrop-blur-md z-50">
     <div class="w-full container mx-auto">
         <NavigationMenu.Root class="w-full max-w-none" viewport={false}>
             <div class="w-full flex items-center justify-between sm:grid sm:grid-cols-3">
@@ -46,7 +46,7 @@
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
-                        <a href="/" class={`${navigationMenuTriggerStyle()} !text-base`}>
+                        <a href="/" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>
                             <CodeXml/> <span class="ml-2">{name}</span>
                         </a>
                     {/snippet}
@@ -58,16 +58,16 @@
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
-                        <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base`}>Journey</a>
+                        <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>Journey</a>
                     {/snippet}
                 </NavigationMenu.Link>
             </NavigationMenu.Item>
 
-            <NavigationMenu.Item>
+            <NavigationMenu.Item class="relative">
                 <NavigationMenu.Trigger class="bg-transparent text-base">
                     Track Record
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px]">
+                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px] !bg-popover/80">
                     <ul
                         class="grid gap-2 p-2 w-[250px] lg:w-[600px] lg:grid-cols-2"
                     >
