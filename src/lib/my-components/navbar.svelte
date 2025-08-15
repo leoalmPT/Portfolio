@@ -38,7 +38,7 @@
     ];
 </script>
 
-<div class="w-full border-b-2 p-2">
+<div class="w-full p-2 border-b-2">
     <div class="w-full container mx-auto">
         <NavigationMenu.Root class="w-full max-w-none" viewport={false}>
             <div class="w-full flex items-center justify-between sm:grid sm:grid-cols-3">
@@ -46,7 +46,7 @@
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
-                        <a href="/" class={navigationMenuTriggerStyle()}>
+                        <a href="/" class={`${navigationMenuTriggerStyle()} !text-base`}>
                             <CodeXml/> <span class="ml-2">{name}</span>
                         </a>
                     {/snippet}
@@ -58,13 +58,13 @@
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
-                        <a href="/journey" class={navigationMenuTriggerStyle()}>Journey</a>
+                        <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base`}>Journey</a>
                     {/snippet}
                 </NavigationMenu.Link>
             </NavigationMenu.Item>
 
             <NavigationMenu.Item>
-                <NavigationMenu.Trigger class="bg-transparent">
+                <NavigationMenu.Trigger class="bg-transparent text-base">
                     Track Record
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px]">
@@ -73,7 +73,7 @@
                     >
                         {#each record as { title, href, description }}
                             <NavigationMenu.Link href={href}>
-                                <div class="font-medium">{title}</div>
+                                <div class="font-medium text-base">{title}</div>
                                 <div class="text-muted-foreground">
                                     {description}
                                 </div>
@@ -86,7 +86,7 @@
 
             <NavigationMenu.List class="ml-auto justify-self-end">
             <NavigationMenu.Item>
-                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent">
+                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent p-0">
                     <SunIcon
                         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
                     />

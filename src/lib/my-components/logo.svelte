@@ -30,7 +30,7 @@
     <Tooltip.Trigger>
         <Button
             variant="outline"
-            class="p-0.5 flex items-center justify-center"
+            class="p-0.5 flex items-center justify-center shadow-xl border-2"
             style="width: {size}rem; height: {size}rem;"
             href={href}
             target={new_window ? "_blank" : undefined}
