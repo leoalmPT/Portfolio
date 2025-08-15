@@ -23,7 +23,6 @@
         return `/icons/${name}.svg`;
     });
     const description = name ? iconDescriptions[name as keyof IconDescription] : undefined;
-    console.log("name", name, "description", description);
 </script>
 
 <Tooltip.Provider>
