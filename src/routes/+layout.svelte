@@ -18,7 +18,7 @@
 <div class="flex flex-col h-[100vh]">
 	<Navbar />
 	<div class="flex-1 overflow-auto flex flex-col">
-		<div class="flex-1 container mx-auto bg-background/50 backdrop-blur-md my-6 p-6 rounded-4xl">
+		<div class="flex-1 container mx-auto my-6 p-6 bg-background/50 backdrop-blur-md rounded-4xl border-2">
 			{@render children?.()}
 		</div>
 	</div>

@@ -4,38 +4,13 @@
     import SunIcon from "@lucide/svelte/icons/sun";
     import MoonIcon from "@lucide/svelte/icons/moon";
     import CodeXml from "@lucide/svelte/icons/code-xml";
-    import { name } from "$lib/data/home.json";
 
     import { toggleMode } from "mode-watcher";
     import { Button } from "$lib/components/ui/button/index.js";
 
+    import { name } from "$lib/data/home.json";
+    import record from "$lib/data/record.json";
 
-    const record: {
-        title: string;
-        href: string;
-        description: string;
-    }[] = [
-        {
-            title: "Experience",
-            href: "/experience",
-            description: "Professional roles and internships where I applied and grew my skills."
-        },
-        {
-            title: "Projects",
-            href: "/projects",
-            description: "A collection of personal and collaborative software projects."
-        },
-        {
-            title: "Scientific Research",
-            href: "/papers",
-            description: "Published papers and academic contributions."
-        },
-        {
-            title: "Recognition",
-            href: "/recognition",
-            description: "Awards and certifications that acknowledge my skills and contributions."
-        }
-    ];
 </script>
 
 <div class="w-full p-2 border-b-2 bg-background/50 backdrop-blur-md z-50">
