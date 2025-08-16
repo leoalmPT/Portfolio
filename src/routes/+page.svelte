@@ -2,6 +2,7 @@
 	import Logo from "$lib/my-components/logo.svelte";
     import info from "$lib/data/home.json";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
+    import Autoplay from 'embla-carousel-autoplay';
 </script>
 
 
@@ -37,6 +38,12 @@
                 opts={{
                     loop: true,
                 }}
+                plugins={[Autoplay({ 
+                    playOnInit: true, 
+                    delay: 5000, 
+                    stopOnMouseEnter: true, 
+                    stopOnInteraction: false 
+                })]}
             >
                 <Carousel.Content>
                     {#each Object.entries(info.skills) as [name, technologies]}
