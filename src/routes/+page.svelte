@@ -13,7 +13,7 @@
 
     <div class="flex flex-col items-center justify-center ">
         <img src={info.image} alt={info.name} class="rounded-4xl w-60 h-60 object-cover border-8 border-primary shadow-xl"/>
-        <div class="flex mt-2 gap-x-2">
+        <div class="flex mt-4 gap-x-2">
             {#each Object.entries(info.socials) as [name, href]}
                 <Logo name={name} href={href} new_window size={3}/>
             {/each}
@@ -21,7 +21,7 @@
     </div>
 </div>
 
-<div class="mt-12">
+<div class="mt-10">
     <div class="text-3xl font-bold text-primary text-center">
         Tech Stack
     </div>
@@ -35,16 +35,19 @@
             {#each Object.entries(info.skills) as [name, technologies]}
                 <Carousel.Item>
                     <div class="text-3xl font-bold my-4 text-center">{name}</div>
-                    <div class="flex flex-wrap gap-2 justify-center px-10">
+                    <div 
+                        class="flex flex-wrap gap-2 justify-center px-10 mx-auto"
+                        class:max-w-xl={technologies.length === 9 || technologies.length === 10}
+                    >
                         {#each technologies as technology}
-                            <Logo name={technology} size={4} href={`/projects?technology=${technology}`} />
+                            <Logo name={technology} size={4} href={`/projects?q=${technology}`} />
                         {/each}
                     </div>
                 </Carousel.Item>
             {/each}
         </Carousel.Content>
-        <Carousel.Previous class="top-[100px] left-0"/>
-        <Carousel.Next class="top-[100px] right-0" />
+        <Carousel.Previous class="top-[100px] left-0 hover:!border-primary"/>
+        <Carousel.Next class="top-[100px] right-0 hover:!border-primary" />
     </Carousel.Root>
 </div>
 

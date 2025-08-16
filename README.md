@@ -6,6 +6,7 @@ Docs:
 - https://lucide.dev/icons/
 - https://www.svgrepo.com/
 - https://dashboardicons.com/
+- https://techicons.dev/
 
 Run:
 ```

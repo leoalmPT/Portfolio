@@ -2,10 +2,9 @@
     import { Button } from "$lib/components/ui/button/index.js";
     import * as Tooltip from "$lib/components/ui/tooltip/index.js";
     import { mode } from "mode-watcher";
-    import darkIcons from "$lib/data/darkIcons.json";
-    import iconDescriptions from "$lib/data/iconDescriptions.json";
+    import iconData from "$lib/data/iconData.json";
 
-    type IconDescription = typeof iconDescriptions;
+    type IconDescription = typeof iconData.descriptions;
 
     let { 
         name = undefined,
@@ -17,21 +16,21 @@
     const theme = $derived(mode.current ?? 'light');
     let getSrc = $derived(() => {
         if (!name) return undefined;
-        if (darkIcons.includes(name) && theme === 'dark') {
+        if (iconData.dark.includes(name) && theme === 'dark') {
             return `/icons/${name}-dark.svg`;
         }
         return `/icons/${name}.svg`;
     });
-    const description = iconDescriptions[name as keyof IconDescription] ?? name;
+    const description = iconData.descriptions[name as keyof IconDescription] ?? name;
     console.log(name, description);
 </script>
 
-<Tooltip.Provider>
+<Tooltip.Provider delayDuration={0}>
   <Tooltip.Root>
     <Tooltip.Trigger>
         <Button
             variant="outline"
-            class="p-0.5 flex items-center justify-center shadow-xl border-2"
+            class="p-0.5 flex items-center justify-center shadow-xl border-2 hover:!border-primary transition-transform duration-150 ease-in-out hover:scale-105"
             style="width: {size}rem; height: {size}rem;"
             href={href}
             target={new_window ? "_blank" : undefined}

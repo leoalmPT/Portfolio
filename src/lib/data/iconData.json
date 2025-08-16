@@ -1,0 +1,17 @@
+{
+    "dark": [
+        "GitHub",
+        "website",
+        "Proxmox",
+        "AWS",
+        "Flask",
+        "Kafka"
+    ],
+    "descriptions": {
+        "website": "My portfolio",
+        "cv": "My Curriculum Vitae",
+        "Cpp": "C++",
+        "GithubActions": "GitHub Actions",
+        "SpringBoot": "Spring Boot"
+    }
+}
