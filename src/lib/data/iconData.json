@@ -1,6 +1,7 @@
 {
     "dark": [
         "GitHub",
+        "email",
         "website",
         "Proxmox",
         "AWS",
@@ -9,6 +10,7 @@
     ],
     "descriptions": {
         "website": "My portfolio",
+        "email": "leonardoalmeida7777@gmail.com",
         "cv": "My Curriculum Vitae",
         "Cpp": "C++",
         "GithubActions": "GitHub Actions",

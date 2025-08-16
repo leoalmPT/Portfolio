@@ -41,13 +41,13 @@
 <div class="w-full p-2 border-b-2 bg-background/50 backdrop-blur-md z-50">
     <div class="w-full container mx-auto">
         <NavigationMenu.Root class="w-full max-w-none" viewport={false}>
-            <div class="w-full flex items-center justify-between sm:grid sm:grid-cols-3">
+            <div class="w-full grid grid-cols-3">
             <NavigationMenu.List class="justify-self-start">
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
                         <a href="/" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>
-                            <CodeXml/> <span class="ml-2">{name}</span>
+                            <CodeXml/> <span class="md:ml-2 hidden md:inline">{name}</span>
                         </a>
                     {/snippet}
                 </NavigationMenu.Link>

@@ -1,9 +1,12 @@
 <script lang="ts">
-	import Logo from "$lib/my-components/logo.svelte";
-    import info from "$lib/data/home.json";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
     import Autoplay from 'embla-carousel-autoplay';
     import { TypeWriter } from 'svelte-typewrite'
+    import { fly } from 'svelte/transition';
+    import { Button } from "$lib/components/ui/button/index.js";
+
+    import Logo from "$lib/my-components/logo.svelte";
+    import info from "$lib/data/home.json";
 </script>
 
 
@@ -11,7 +14,7 @@
     <div></div>
 
     <div class="lg:grid lg:grid-cols-2 gap-2 px-2">
-        <div class="flex flex-col justify-center text-center">
+        <div class="flex flex-col justify-center text-center items-center" in:fly|global={{ y: 100, duration: 500, delay: 0 }}>
             <div class="text-4xl font-bold">
                 I'm  
                 <span class="text-primary">
@@ -36,9 +39,16 @@
             </div>
             <div class="text-2xl font-bold">{info.role}</div>
             <div class="text-lg mt-2">{info.summary}</div>
+            <Button 
+                variant="default" 
+                class="mt-4 text-lg text-foreground w-fit hover:scale-105 transition-transform duration-150 ease-in-out" 
+                href="/journey"
+            > 
+                Find out more!
+            </Button>
         </div>
 
-        <div class="flex flex-col items-center justify-center mt-10 lg:mt-0">
+        <div class="flex flex-col items-center justify-center mt-10 lg:mt-0" in:fly|global={{ y: 100, duration: 500, delay: 100 }}>
             <img src={info.image} alt={info.name} class="rounded-4xl w-[300px] object-cover border-8 border-primary shadow-xl"/>
             <div class="flex mt-4 gap-x-2">
                 {#each Object.entries(info.socials) as [name, href]}
@@ -49,9 +59,9 @@
     </div>
 
 
-    <div class="lg:grid lg:grid-cols-2 gap-2 lg:mt-20">
+    <div class="lg:grid lg:grid-cols-2 gap-2 lg:mt-20" >
 
-        <div class="mt-10 lg:mt-0">
+        <div class="mt-10 lg:mt-0" in:fly|global={{ y: 100, duration: 500, delay: 200 }}>
             <div class="text-4xl font-bold text-primary text-center">
                 Tech Stack
             </div>
@@ -87,7 +97,7 @@
             </Carousel.Root>
         </div>
 
-        <div class="mt-10 lg:mt-0">
+        <div class="mt-10 lg:mt-0" in:fly|global={{ y: 100, duration: 500, delay: 300 }}>
             <div class="text-4xl font-bold text-primary text-center mb-2">
                 Education
             </div>
