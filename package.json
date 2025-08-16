@@ -47,6 +47,7 @@
 		"@tsparticles/slim": "^3.9.1",
 		"@tsparticles/svelte": "^3.1.1",
 		"embla-carousel-autoplay": "^8.6.0",
-		"mode-watcher": "^1.1.0"
+		"mode-watcher": "^1.1.0",
+		"svelte-typewrite": "^3.0.0"
 	}
 }

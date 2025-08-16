@@ -3,6 +3,7 @@
     import info from "$lib/data/home.json";
     import * as Carousel from "$lib/components/ui/carousel/index.js";
     import Autoplay from 'embla-carousel-autoplay';
+    import { TypeWriter } from 'svelte-typewrite'
 </script>
 
 
@@ -11,7 +12,28 @@
 
     <div class="lg:grid lg:grid-cols-2 gap-2 px-2">
         <div class="flex flex-col justify-center text-center">
-            <div class="text-4xl font-bold">I'm  <span class="text-primary">{info.name}</span></div>
+            <div class="text-4xl font-bold">
+                I'm  
+                <span class="text-primary">
+                    <TypeWriter 
+                        texts={[info.name]} 
+                        repeat={3}
+                        endState={{
+                            text: 'typed',
+                            caret: 'hidden'
+                        }}
+                        typeSpeed={70}
+                        deleteSpeed={50}
+                        blinkDuration={700}
+                        afterTyped={{
+                            blink: 5
+                        }}
+                        afterDeleted={{
+                            blink: 1
+                        }}
+                    />
+                </span>
+            </div>
             <div class="text-2xl font-bold">{info.role}</div>
             <div class="text-lg mt-2">{info.summary}</div>
         </div>

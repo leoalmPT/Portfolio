@@ -20,6 +20,9 @@ importers:
       mode-watcher:
         specifier: ^1.1.0
         version: 1.1.0(svelte@5.38.0)
+      svelte-typewrite:
+        specifier: ^3.0.0
+        version: 3.0.0(svelte@5.38.0)
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -1872,6 +1875,11 @@ packages:
     engines: {node: '>=18', pnpm: '>=8.7.0'}
     peerDependencies:
       svelte: ^5.30.2
+
+  svelte-typewrite@3.0.0:
+    resolution: {integrity: sha512-W+MkV8aV9NOIQdV0F2iP0PcuJUKRK3RlrrU44GOPjWwzlV93PneEdhumvSJuOrKh2lJwHHvNc+FEUg+DtNSf6Q==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte@5.38.0:
     resolution: {integrity: sha512-cWF1Oc2IM/QbktdK89u5lt9MdKxRtQnRKnf2tq6KOhYuhLOd2hbMuTiJ+vWMzAeMDe81AzbCgLd4GVtOJ4fDRg==}
@@ -3732,6 +3740,10 @@ snapshots:
       clsx: 2.1.1
       runed: 0.29.2(svelte@5.38.0)
       style-to-object: 1.0.9
+      svelte: 5.38.0
+
+  svelte-typewrite@3.0.0(svelte@5.38.0):
+    dependencies:
       svelte: 5.38.0
 
   svelte@5.38.0:
