@@ -22,7 +22,6 @@
         return `/icons/${name}.svg`;
     });
     const description = iconData.descriptions[name as keyof IconDescription] ?? name;
-    console.log(name, description);
 </script>
 
 <Tooltip.Provider delayDuration={0}>

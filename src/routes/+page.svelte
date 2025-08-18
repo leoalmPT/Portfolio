@@ -103,8 +103,8 @@
             </div>
             {#each info.education as { degree, area, institution, date }}
                 <div class="my-2 text-center">
-                    <div class="text-xl font-bold">
-                        <span class="text-primary">{degree}</span> in {area}
+                    <div class="text-xl">
+                        <span class="text-primary font-bold">{degree}</span> in <span class="font-bold">{area}</span>
                     </div>
                     <div class="text-lg">{institution} - {date}</div>
                 </div>
