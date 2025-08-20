@@ -12,12 +12,16 @@
 <div class="lg:min-h-full lg:grid lg:grid-cols-8">
 
     <div class="col-span-3 min-h-full flex items-center justify-center p-10">
-        <img 
-            src={info.image} 
-            alt={info.name} 
-            class="object-cover border-8 border-primary rounded-4xl w-[400px] lg:w-full"
+        <div 
+            class="aspect-3/4 border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full min-h-[400px]"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
-        />
+        >
+            <img 
+                src={info.image} 
+                alt={info.name} 
+                class="object-fit h-full"
+            />
+        </div>
     </div>
 
     <div class="col-span-5 min-h-full flex flex-col justify-center p-2">

@@ -39,7 +39,11 @@
         </Button>
     </Tooltip.Trigger>
     {#if description}
-        <Tooltip.Content side="bottom">
+        <Tooltip.Content 
+            side="bottom" 
+            class="bg-accent border border-primary text-foreground"
+            arrowClasses="bg-accent border border-primary"
+        >
             {description}
         </Tooltip.Content>
     {/if}
