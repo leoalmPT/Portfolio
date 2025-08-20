@@ -30,6 +30,10 @@
     });
 </script>
 
+<div class="text-center text-5xl font-bold">
+    Journey
+</div>
+
 <Search bind:query placeholder="Search for titles, descriptions or even skills..." />
 
 <!-- button that switch papers -->
