@@ -36,7 +36,7 @@
     });
 </script>
 
-<div class="flex items-center relative max-w-3xl mx-auto">
+<div class="w-full flex items-center relative max-w-3xl mx-auto">
     <Search class="absolute text-muted-foreground ml-2"/>
     <Input 
         bind:value={q} 

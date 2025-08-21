@@ -13,13 +13,14 @@
 
     <div class="col-span-3 min-h-full flex items-center justify-center p-10">
         <div 
-            class="aspect-3/4 border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full min-h-[400px]"
+            class="aspect-3/4 border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full min-h-[400px] bg-muted"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 
                 src={info.image} 
                 alt={info.name} 
-                class="object-fit h-full"
+                class="object-fit h-full opacity-0 transition-opacity duration-700 ease-in-out"
+                onload={(e) => e.currentTarget.classList.remove('opacity-0')}
             />
         </div>
     </div>
