@@ -7,6 +7,8 @@
 
     import Logo from "$lib/my-components/logo.svelte";
     import info from "$lib/data/home.json";
+    import iconData from "$lib/data/iconData.json";
+    const descriptions: { [key: string]: string } = iconData.descriptions;
 </script>
 
 <div class="lg:min-h-full lg:grid lg:grid-cols-8">
@@ -109,7 +111,7 @@
                                 class="flex flex-wrap gap-2"
                             >
                                 {#each technologies as technology}
-                                    <Logo name={technology} size={4} href={`/projects?q=${technology}`} />
+                                    <Logo name={technology} size={4} href={`/projects?q=tech:${encodeURIComponent(descriptions[technology] || technology)}`} />
                                 {/each}
                             </div>
                         </Carousel.Item>

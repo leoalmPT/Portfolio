@@ -1,12 +1,15 @@
 <script lang="ts">
     import { Switch } from "$lib/components/ui/switch/index.js";
     import { Label } from "$lib/components/ui/label/index.js";
-    import { fly } from 'svelte/transition';
+    import { fly, slide } from 'svelte/transition';
     import CircleQuestionMark from "$lib/assets/circleQuestionMark.svelte";
+    import StepBack from "@lucide/svelte/icons/step-back";
 
     import Search, { filter } from "$lib/my-components/search.svelte";
     import Results from "$lib/my-components/results.svelte";
     import { type Item } from "$lib/data/types";
+    import itemColors from "$lib/data/itemColors.json";
+    import Card from "$lib/my-components/card.svelte";
 
     import { experiences } from "$lib/data/experience";
     import { papers } from "$lib/data/papers";
@@ -35,17 +38,15 @@
         data = originalData.filter(item => categories[item.category as CategoryKey]);
         results = filter(query, data);
     }
-
-    const filterNamesColors = {
-        Experience: ["Experience", "!bg-blue-500"],
-        Paper: ["Papers", "!bg-green-500"],
-        Certification: ["Certifications", "!bg-red-500"],
-        Award: ["Awards", "!bg-yellow-500"],
+    
+    const filterNames = {
+        Experience: "Experience",
+        Paper: "Papers",
+        Certification: "Certifications",
+        Award: "Awards",
     }
 
 </script>
-
-<div ></div>
 
 <div 
     class="text-center text-5xl font-bold mb-6"
@@ -58,7 +59,7 @@
 <div in:fly|global={{ y: 100, duration: 500, delay: 100 }}>
     <Search 
         bind:query 
-        placeholder="Search for titles, descriptions or even skills..."
+        placeholder="Search for titles, descriptions or even technologies..."
     />
 </div>
 
@@ -71,10 +72,10 @@
             <Switch
                 bind:checked={categories[category as CategoryKey]}
                 onCheckedChange={handleSwitch}
-                class={categories[category as CategoryKey] ? filterNamesColors[category as CategoryKey][1] : ""}
+                style={{ backgroundColor: categories[category as CategoryKey] ? `${itemColors[category as CategoryKey]} !important` : "" }}
                 id={category}
             />
-            <Label for={category} class="text-lg">{filterNamesColors[category as CategoryKey][0]}</Label>
+            <Label for={category} class="text-lg">{filterNames[category as CategoryKey]}</Label>
         </div>
     {/each}
 
@@ -90,17 +91,18 @@
             {#key item.title + index}
                 <div 
                     class={`flex-1 flex justify-center py-4 lg:p-10 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}
-                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 400 : 100 * index }}
+                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 500 : 100 * index }}
                 >
-                    <div class="w-full max-w-xl fly-scroll h-[200px] debug">
-                    </div>
+                    <Card {item} />
                 </div>
             {/key}
             <div 
                 class="border-2 border-primary hidden lg:inline relative"
-                in:fly|global={{ y: 100, duration: 500, delay: 300 }}
+                in:slide|global={{ duration: 100, delay: first ? 400 + 100 * index : 100 * index }}
             >
-                <div class="absolute h-10 w-10 debug top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <div class={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${index % 2 === 0 ? "ml-[-20px]" : "ml-[20px] rotate-180"}`}>
+                    <div class="border-t-10 border-b-10 border-r-20 border-t-transparent border-b-transparent border-r-primary"></div>
+                </div>
                 <div class={`absolute w-21 border-2 border-primary bottom-[-4px] ${index % 2 === 0 ? "right-[-2px]" : "left-[-2px]"}`}></div>
             </div>
             <div class="hidden flex-1 lg:inline">

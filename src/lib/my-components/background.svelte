@@ -46,4 +46,4 @@
     id="tsparticles"
     options={particlesConfig}
 />
-<div class="absolute z-[-2] h-full w-full bg-radial-[at_50%_90%] from-blue-50 via-blue-100 via-60% to-blue-200 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950"></div>
+<div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] from-blue-50 via-blue-100 via-60% to-blue-200 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950"></div>
