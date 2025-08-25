@@ -13,7 +13,11 @@
 </script>
 
 {#if item}
-    {JSON.stringify(item)}
+    <div class="prose max-w-none dark:prose-invert">
+        {#if item.content}
+            <item.content />
+        {/if}
+    </div>
 {:else}
     <Error />
 {/if}

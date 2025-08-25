@@ -1,8 +1,10 @@
+type MarkdownComponentType = typeof import("*.md")["default"];
+
 interface Base {
     id: string;
     title: string;
     description: string;
-    content: string;
+    content?: MarkdownComponentType;
     images?: string[];
     category?: "Award" | "Experience" | "Paper" | "Certification" | "Project";
 }
