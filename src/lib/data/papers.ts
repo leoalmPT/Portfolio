@@ -2,6 +2,7 @@ import {type Paper} from './types';
 
 export const papers: Paper[] = [
     {
+        id: "paper-1",
         title: "Paper 1",
         description: "Description for paper 1",
         content: "paper-1.md",
@@ -10,6 +11,7 @@ export const papers: Paper[] = [
         publisher: "Publisher 1"
     },
     {
+        id: "paper-2",
         title: "Paper 2",
         description: "Description for paper 2",
         content: "paper-2.md",
@@ -18,6 +20,7 @@ export const papers: Paper[] = [
         publisher: "Publisher 2"
     },
     {
+        id: "paper-3",
         title: "Paper 3",
         description: "Description for paper 1",
         content: "paper-1.md",
@@ -26,6 +29,7 @@ export const papers: Paper[] = [
         publisher: "Publisher 1"
     },
     {
+        id: "paper-4",
         title: "Paper 4",
         description: "Description for paper 2",
         content: "paper-2.md",

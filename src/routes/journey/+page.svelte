@@ -3,7 +3,6 @@
     import { Label } from "$lib/components/ui/label/index.js";
     import { fly, slide } from 'svelte/transition';
     import CircleQuestionMark from "$lib/assets/circleQuestionMark.svelte";
-    import StepBack from "@lucide/svelte/icons/step-back";
 
     import Search, { filter } from "$lib/my-components/search.svelte";
     import Results from "$lib/my-components/results.svelte";
@@ -31,7 +30,9 @@
         Award: true,
         Certification: true,
     });
-    let first = $state(true);
+    let counter = $derived(results.length*0-1);
+    let first = $derived(results.length === 0);
+    first = true;
     type CategoryKey = keyof typeof categories;
 
     const handleSwitch = () => {
@@ -51,7 +52,6 @@
 <div 
     class="text-center text-5xl font-bold mb-6"
     in:fly|global={{ y: 100, duration: 500, delay: 0 }}
-    onintrostart={() => {first = false}}
 >
     Journey
 </div>
@@ -91,14 +91,15 @@
             {#key item.title + index}
                 <div 
                     class={`flex-1 flex justify-center py-4 lg:p-10 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}
-                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 500 : 100 * index }}
+                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 500 : 100 * counter }}
+                    onintrostart={() => counter += 1}
                 >
                     <Card {item} />
                 </div>
             {/key}
             <div 
                 class="border-2 border-primary hidden lg:inline relative"
-                in:slide|global={{ duration: 100, delay: first ? 400 + 100 * index : 100 * index }}
+                in:slide|global={{ duration: 100, delay: first ? 400 + 100 * index : 100 * counter }}
             >
                 <div class={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${index % 2 === 0 ? "ml-[-20px]" : "ml-[20px] rotate-180"}`}>
                     <div class="border-t-10 border-b-10 border-r-20 border-t-transparent border-b-transparent border-r-primary"></div>
