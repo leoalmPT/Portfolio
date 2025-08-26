@@ -77,14 +77,13 @@
     />
     <!-- {#if focused && show}
         <div 
-            class="absolute w-full mt-12 top-0 z-50 cursor-pointer"
-            transition:fade|global={{ duration: 100 }}
+            class="absolute w-full mt-12 top-0 z-50 cursor-pointer animate-in fade-in"
         >
-            <Card.Root class="p-2 gap-2">
+            <div class="p-2 gap-2 debug">
                 <div class="h-10 w-full hover:bg-muted"></div>
                 <div class="h-10 w-full hover:bg-muted"></div>
                 <div class="h-10 w-full hover:bg-muted"></div>
-            </Card.Root>
+            </div>
         </div>
     {/if} -->
 </div>

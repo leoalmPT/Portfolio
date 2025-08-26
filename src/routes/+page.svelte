@@ -13,7 +13,7 @@
 
 <div class="lg:min-h-full lg:grid lg:grid-cols-8">
 
-    <div class="col-span-3 min-h-full flex items-center justify-center p-10">
+    <div class="col-span-3 lg:min-h-full flex items-center justify-center p-10">
         <div 
             class="aspect-3/4 border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full min-h-[400px] bg-muted"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
@@ -27,7 +27,7 @@
         </div>
     </div>
 
-    <div class="col-span-5 min-h-full flex flex-col justify-center p-2">
+    <div class="col-span-5 lg:min-h-full flex flex-col justify-center p-2">
 
         <div 
             class="text-5xl font-bold" 
@@ -103,7 +103,7 @@
                     stopOnInteraction: false 
                 })]}
             >
-                <Carousel.Content class="p-1">
+                <Carousel.Content>
                     {#each Object.entries(info.skills) as [name, technologies]}
                         <Carousel.Item>
                             <div class="text-3xl font-bold mb-4 mt-[100px]">{name}</div>
@@ -111,14 +111,14 @@
                                 class="flex flex-wrap gap-2"
                             >
                                 {#each technologies as technology}
-                                    <Logo name={technology} size={4} href={`/projects?q=tech:${encodeURIComponent(descriptions[technology] || technology)}`} />
+                                    <Logo name={technology} size={4} link={true} />
                                 {/each}
                             </div>
                         </Carousel.Item>
                     {/each}
                 </Carousel.Content>
-                <Carousel.Previous class="top-[60px] left-0 hover:!border-primary"/>
-                <Carousel.Next class="top-[60px] left-0 hover:!border-primary translate-x-[280px]" />
+                <Carousel.Previous class="top-[60px] left-0 hover:!border-primary hover:cursor-pointer"/>
+                <Carousel.Next class="top-[60px] left-0 hover:!border-primary translate-x-[280px] hover:cursor-pointer" />
             </Carousel.Root>
         </div>
 

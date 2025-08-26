@@ -3,15 +3,17 @@
     import * as Tooltip from "$lib/components/ui/tooltip/index.js";
     import { mode } from "mode-watcher";
     import iconData from "$lib/data/iconData.json";
+    import { type Skill } from "$lib/data/types";
 
     type IconDescription = typeof iconData.descriptions;
 
     let { 
         name = undefined,
         href = undefined,
+        link = false,
         new_window = false,
         size = 2.5,
-    } = $props<{ name?: string, href?: string, new_window?: boolean, size?: number }>();
+    } = $props<{ name?: string | Skill, href?: string, link?: boolean, new_window?: boolean, size?: number }>();
 
     const theme = $derived(mode.current ?? 'light');
     let getSrc = $derived(() => {
@@ -22,6 +24,7 @@
         return `/icons/${name}.svg`;
     });
     const description = iconData.descriptions[name as keyof IconDescription] ?? name;
+    if (link) href = `/projects?q=tech:${encodeURIComponent(description || name)}`;
 </script>
 
 <Tooltip.Provider delayDuration={0}>

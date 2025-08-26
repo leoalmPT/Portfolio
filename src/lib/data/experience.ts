@@ -1,4 +1,4 @@
-import { type Experience } from "./types";
+import { type Experience } from "$lib/data/types";
 
 import content1 from "$lib/md/experience/1.md";
 
@@ -6,11 +6,17 @@ export const experiences: Experience[] = [
     {
         id: "experience-1",
         title: "Researcher",
-        description: "random text",
+        description: `
+            Docs: <br />
+            - https://svelte.dev/docs/kit/introduction
+            - https://www.shadcn-svelte.com/docs
+            - https://svelte.dev/docs/kit/introduction
+            - https://www.shadcn-svelte.com/docshttps
+        `,
         content: content1,
         company: "University of Aveiro",
         date: "2022-01-01",
-        skills: ["svelte"],
+        skills: ["Svelte", "Proxmox", "MQTT"],
         endDate: "Present"
     }
 ];

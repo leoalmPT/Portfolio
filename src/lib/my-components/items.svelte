@@ -39,7 +39,7 @@
 </div>
 
 <Results bind:results >
-    <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6">
         {#each results as item, index}
             {#key item.title + index}
                 <div
