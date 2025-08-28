@@ -7,8 +7,6 @@
 
     import Logo from "$lib/my-components/logo.svelte";
     import info from "$lib/data/home.json";
-    import iconData from "$lib/data/iconData.json";
-    const descriptions: { [key: string]: string } = iconData.descriptions;
 </script>
 
 <div class="lg:min-h-full lg:grid lg:grid-cols-8">

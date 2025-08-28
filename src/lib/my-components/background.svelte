@@ -2,6 +2,7 @@
     import Particles, { particlesInit } from '@tsparticles/svelte';
     import { loadSlim } from '@tsparticles/slim';
     import { mode } from "mode-watcher";
+    import { fade } from 'svelte/transition';
 
     let theme = $derived(mode.current ?? 'light');
     const colors = {
@@ -40,6 +41,9 @@
     void particlesInit(async (engine) => {
         await loadSlim(engine);
     });
+
+    let showRobot = $state(false);
+    setTimeout(() => {showRobot = true}, 0);
 </script>
 
 <Particles
@@ -47,3 +51,24 @@
     options={particlesConfig}
 />
 <div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] via-60% from-slate-50 via-cyan-50 to-blue-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950"></div>
+
+
+{#if showRobot}
+    <div 
+        class="fixed h-[500px] top-1/2 -translate-y-1/2 right-0 hidden robot"
+        style="min-width: calc((100vw - 96rem)/2);"
+        in:fade|global={{ duration: 500, delay: 500 }}
+    >
+        <spline-viewer 
+            url="https://prod.spline.design/6qiEqJVGYD2RYTlD/scene.splinecode"
+        ></spline-viewer>
+    </div>
+{/if}
+
+<style>
+    @media (min-width: 130rem) {
+        .robot {
+            display: block;
+        }
+    }
+</style>
