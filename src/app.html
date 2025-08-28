@@ -9,13 +9,4 @@
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 	<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.52/build/spline-viewer.js"></script>
-	<script type="module">
-		function removeLogo() {
-			const sv = document.querySelector("spline-viewer");
-			const logo = sv?.shadowRoot?.querySelector("#logo");
-			if (logo) logo.remove();
-			else setTimeout(removeLogo, 100);
-		}
-		removeLogo();
-	</script>
 </html>

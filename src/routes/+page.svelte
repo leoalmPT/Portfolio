@@ -115,8 +115,8 @@
                         </Carousel.Item>
                     {/each}
                 </Carousel.Content>
-                <Carousel.Previous class="top-[60px] left-0 hover:!border-primary hover:cursor-pointer"/>
-                <Carousel.Next class="top-[60px] left-0 hover:!border-primary translate-x-[280px] hover:cursor-pointer" />
+                <Carousel.Previous class="top-[63px] left-0 hover:!border-primary hover:cursor-pointer"/>
+                <Carousel.Next class="top-[63px] left-0 hover:!border-primary translate-x-[280px] hover:cursor-pointer" />
             </Carousel.Root>
         </div>
 

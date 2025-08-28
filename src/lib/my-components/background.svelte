@@ -43,7 +43,19 @@
     });
 
     let showRobot = $state(false);
-    setTimeout(() => {showRobot = true}, 0);
+    function removeLogo() {
+        const sv = document.querySelector("spline-viewer");
+        const logo = sv?.shadowRoot?.querySelector("#logo");
+        if (logo) logo.remove();
+        else setTimeout(removeLogo, 100);
+    }
+    removeLogo();
+    setTimeout(() => {
+        showRobot = true;
+    }, 500);
+    window.addEventListener('beforeunload', () => {
+        showRobot = false;
+    });
 </script>
 
 <Particles
@@ -57,7 +69,7 @@
     <div 
         class="fixed h-[500px] top-1/2 -translate-y-1/2 right-0 hidden robot"
         style="min-width: calc((100vw - 96rem)/2);"
-        in:fade|global={{ duration: 500, delay: 500 }}
+        in:fade|global={{ duration: 500, delay: 0 }}
     >
         <spline-viewer 
             url="https://prod.spline.design/6qiEqJVGYD2RYTlD/scene.splinecode"
