@@ -19,7 +19,7 @@ interface Base {
     title: string;
     description: string;
     content?: MarkdownComponentType;
-    images?: string[];
+    // media?: string[];
     category?: "Award" | "Experience" | "Paper" | "Certification" | "Project";
 }
 
@@ -28,16 +28,16 @@ export interface Project extends Base {
 }
 
 export interface Experience extends Base {
-    company: string;
     skills: Skill[];
     date: string;
     endDate: string;
+    // company: string;
 }
 
 export interface Paper extends Base {
-    authors: string[];
     date: string;
-    publisher: string;
+    // authors: string[];
+    // publisher: string;
 }
 
 export interface Award extends Base {

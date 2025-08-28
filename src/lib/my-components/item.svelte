@@ -1,5 +1,17 @@
+<script module lang="ts">
+    export const getDate = (dateString: string) => {
+        if (dateString === "Present") {
+            return "Present";
+        }
+        return new Date(dateString).toLocaleString("default", { month: "short", year: "numeric" });
+    };
+</script>
+
+
 <script lang="ts">
     import { page } from '$app/state';
+    import Calendar from "@lucide/svelte/icons/calendar";
+    import { fly } from 'svelte/transition';
 
     import { type Item as ItemType } from "$lib/data/types";
     import Error from '$lib/my-components/error.svelte';
@@ -11,25 +23,49 @@
 
     const id = page.params.id;
     const item = data.find((item: ItemType) => item.id === id);
-    const hasSkills = item?.skills?.length > 0;
 </script>
 
 {#if item}
-    {#if hasSkills}
-        <div class="flex flex-wrap gap-2">
-            {#each item.skills as skill}
-                <Logo name={skill} link={true} />
-            {/each}
+    <div class="m-2">
+
+        <div 
+            class="flex flex-col gap-y-3 justify-center items-center"
+            in:fly|global={{ y: 100, duration: 500, delay: 0 }}
+        >
+            <div class="text-5xl font-bold">{item.title}</div>
+            {#if item.date}
+                <div class="flex gap-2">
+                    <Calendar size={22} />
+                    {getDate(item.date)}
+                    {#if item.endDate}
+                        - {getDate(item.endDate)}
+                    {/if}
+                </div>
+            {/if}
+            {#if item.skills}
+                <div class="flex flex-wrap gap-2 justify-center">
+                    {#each item.skills as skill}
+                        <Logo name={skill} link /> 
+                    {/each}
+                </div>
+            {/if}
         </div>
-    {/if}
 
-    <div class="prose max-w-none dark:prose-invert px-2">
-        {#if item.content}
-            <item.content />
-        {/if}
+        <div 
+            class="my-4 border"
+            in:fly|global={{ y: 100, duration: 500, delay: 100 }}
+        ></div>
+
+        <div in:fly|global={{ y: 100, duration: 500, delay: 200 }}>
+            {#if item.content}
+                <div class="prose max-w-none dark:prose-invert text-foreground">
+                    <item.content />
+                </div>
+            {:else}
+                {@html item.description}
+            {/if}
+        </div>
     </div>
-
-    <div class="w-40 h-40 animate-in slide-in-from-bottom debug"></div>
 {:else}
     <Error />
 {/if}

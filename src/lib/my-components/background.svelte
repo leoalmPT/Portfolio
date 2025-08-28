@@ -6,12 +6,12 @@
     let theme = $derived(mode.current ?? 'light');
     const colors = {
         dark: {
-            color: "#60a5fa",
-            link: "#60a5fa",
+            color: "#0284c7",
+            link: "#0284c7",
         },
         light: {
-            color: "#60a5fa",
-            link: "#60a5fa",
+            color: "#0284c7",
+            link: "#0284c7",
         }
     }
 
@@ -46,4 +46,4 @@
     id="tsparticles"
     options={particlesConfig}
 />
-<div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] from-blue-50 via-blue-100 via-60% to-blue-200 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950"></div>
+<div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] via-60% from-slate-50 via-cyan-50 to-blue-100 dark:from-slate-800 dark:via-slate-900 dark:to-slate-950"></div>

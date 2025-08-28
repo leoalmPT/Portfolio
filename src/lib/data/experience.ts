@@ -6,15 +6,8 @@ export const experiences: Experience[] = [
     {
         id: "experience-1",
         title: "Researcher",
-        description: `
-            Docs: <br />
-            - https://svelte.dev/docs/kit/introduction
-            - https://www.shadcn-svelte.com/docs
-            - https://svelte.dev/docs/kit/introduction
-            - https://www.shadcn-svelte.com/docshttps
-        `,
+        description:  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
         content: content1,
-        company: "University of Aveiro",
         date: "2022-01-01",
         skills: ["Svelte", "Proxmox", "MQTT"],
         endDate: "Present"

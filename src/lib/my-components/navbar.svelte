@@ -4,12 +4,36 @@
     import SunIcon from "@lucide/svelte/icons/sun";
     import MoonIcon from "@lucide/svelte/icons/moon";
     import CodeXml from "@lucide/svelte/icons/code-xml";
+    import Route from "@lucide/svelte/icons/route";
+    import BadgeCheck from "@lucide/svelte/icons/badge-check";
 
     import { toggleMode } from "mode-watcher";
     import { Button } from "$lib/components/ui/button/index.js";
 
     import { name } from "$lib/data/home.json";
-    import record from "$lib/data/record.json";
+    
+    const record = [
+        {
+            "title": "Projects",
+            "href": "/projects",
+            "description": "A collection of personal and collaborative software projects."
+        },
+        {
+            "title": "Scientific Research",
+            "href": "/papers",
+            "description": "Published papers and academic contributions."
+        },
+        {
+            "title": "Experience",
+            "href": "/experience",
+            "description": "Professional roles and internships where I applied and grew my skills."
+        },
+        {
+            "title": "Recognition",
+            "href": "/recognition",
+            "description": "Awards and certifications that acknowledge my skills and contributions."
+        }
+    ];
 
 </script>
 
@@ -33,14 +57,16 @@
             <NavigationMenu.Item>
                 <NavigationMenu.Link>
                     {#snippet child()}
-                        <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>Journey</a>
+                        <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>
+                            <Route /> <span class="ml-2">Journey</span>
+                        </a>
                     {/snippet}
                 </NavigationMenu.Link>
             </NavigationMenu.Item>
 
             <NavigationMenu.Item class="relative">
                 <NavigationMenu.Trigger class="bg-transparent text-base">
-                    Track Record
+                    <BadgeCheck /> <span class="ml-2">Track Record</span>
                 </NavigationMenu.Trigger>
                 <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px] !bg-gradient-to-br from-card to-secondary">
                     <ul
@@ -61,7 +87,7 @@
 
             <NavigationMenu.List class="ml-auto justify-self-end">
             <NavigationMenu.Item>
-                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent p-0 hover:!border-primary">
+                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent p-0 hover:!border-primary hover:cursor-pointer">
                     <SunIcon
                         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
                     />
