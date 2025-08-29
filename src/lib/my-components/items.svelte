@@ -33,6 +33,7 @@
     class="mb-6"
 >
     <Search 
+        tech={tech}
         bind:query 
         placeholder={placeholder}
     />

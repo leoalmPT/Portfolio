@@ -58,6 +58,7 @@
 
 <div in:fly|global={{ y: 100, duration: 500, delay: 100 }}>
     <Search 
+        tech={true}
         bind:query 
         placeholder="Search for titles, descriptions or even technologies..."
     />
