@@ -26,49 +26,13 @@
             return matchesSkill && matchesGeneral;
         });
     };
-
-    const getCaretPosition = (el: HTMLDivElement) => {
-        const sel = window.getSelection();
-        if (!sel || sel.rangeCount === 0) return 0;
-        const range = sel.getRangeAt(0);
-        const preRange = range.cloneRange();
-        preRange.selectNodeContents(el);
-        preRange.setEnd(range.endContainer, range.endOffset);
-        return preRange.toString().length;
-    };
-
-    const setCaretPosition = (el: HTMLDivElement, chars: number) => {
-        const sel = window.getSelection();
-        if (!sel) return;
-        let node: ChildNode | null = el;
-        let remaining = chars;
-        const traverse = (n: ChildNode): boolean => {
-            if (n.nodeType === Node.TEXT_NODE) {
-                if ((n.textContent?.length ?? 0) >= remaining) {
-                    const range = document.createRange();
-                    range.setStart(n, remaining);
-                    range.collapse(true);
-                    sel.removeAllRanges();
-                    sel.addRange(range);
-                    return true;
-                } else {
-                    remaining -= n.textContent?.length ?? 0;
-                }
-            } else {
-                for (let child of n.childNodes) {
-                    if (traverse(child)) return true;
-                }
-            }
-            return false;
-        };
-        traverse(node);
-    };
 </script>
 
 
 <script lang="ts">
     import Search from "@lucide/svelte/icons/search";
     import X from "@lucide/svelte/icons/x";
+    import Input, { clearInput, getCaretPosition, setCaretNext } from "$lib/my-components/Input.svelte";
 
     let { 
         placeholder = "Search...",
@@ -81,59 +45,46 @@
     let timeoutId: ReturnType<typeof setTimeout> | null = null;
     let input = $state<HTMLDivElement | null>(null);
 
-    const highlightInput = () => {
-        return q.replace(/tech:\w*/g, (match: string) => `<span class="rounded-sm bg-secondary px-1 border border-primary">${match}</span>`);
+    const highlightInput = (value: string) => {
+        return value.replace(/tech:\w*/g, (match: string) => `<span class="rounded-sm bg-secondary px-1 border border-primary">${match}</span>`);
     };
 
-    const updateInnerHtml = () => {
-        if (!input) return;
-        const pos = getCaretPosition(input);
-        input.innerHTML = highlightInput();
-        if (input.innerHTML !== "") {
-            input.innerHTML = `<span>${input.innerHTML}</span>`;
-        }
-        setCaretPosition(input, pos);
-    };
-
-    const updateQuery = (e: Event) => {
-        q = (e.target as HTMLDivElement).innerText.replace(/\n/g, "");
-        console.log(q);
-        if (tech) updateInnerHtml();
+    const onInput = (value: string) => {
+        q = value;
         if (timeoutId) {
             clearTimeout(timeoutId);
         }
         timeoutId = setTimeout(() => {
-            query = q.trim();
+            query = value.replaceAll("\u00A0", " ").trim();
         }, 500);
     };
 
     const resetQuery = () => {
-        if (input) input.innerHTML = "";
+        if (input) clearInput(input);
         q = "";
         query = "";
     };
 
-    const handleCopy = (e: ClipboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
         if (!input) return;
-        e.preventDefault();
-        e.clipboardData?.setData("text/plain", q);
+        if (e.key === "Enter") {
+            console.log(q);
+            e.preventDefault();
+            setCaretNext(input, getCaretPosition(input));
+        }
     };
 </script>
 
 <div class="w-full flex items-center relative max-w-3xl mx-auto">
     <Search class="absolute text-muted-foreground left-2"/>
-    <div 
-        bind:this={input}
-        contenteditable
-        role="textbox"
-        tabindex="0"
-        oninput={updateQuery}
-        onfocus={() => focused = true}
-        onblur={() => focused = false}
-        oncopy={handleCopy}
-        class="text-base px-10 focus:ring-primary focus:ring-3 bg-gradient-to-br from-card to-secondary w-full border border-input py-1 rounded-md h-9 flex items-center outline-none"
-    >
-    </div>
+    <Input 
+        bind:ref={input}
+        bind:value={q}
+        bind:focused={focused}
+        onInput={onInput}
+        onKeyDown={handleKeyDown}
+        highlightCallback={tech ? highlightInput : null}
+    />
     {#if q.length === 0}
         <span class="absolute text-muted-foreground pointer-events-none pl-11 pr-2 truncate w-full">{placeholder}</span>
     {:else}
