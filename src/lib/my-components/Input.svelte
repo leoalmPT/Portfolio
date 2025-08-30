@@ -122,10 +122,12 @@
 
 
     const handleSelectionChange = () => {
-        onMove?.();
         if (!ref) return;
         const highlightEl = getCurrentHighlight();
-        if (highlightEl === null) return;
+        if (highlightEl === null) {
+            onMove?.();
+            return;
+        }
         onHighlight?.(highlightEl);
     };
 

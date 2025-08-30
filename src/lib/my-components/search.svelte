@@ -84,7 +84,9 @@
         showTech = false;
     };
 
-    const setFilterValue = (el: HTMLElement, value: string) => {
+    const setFilterValue = (value: string) => {
+        const el = getCurrentHighlight();
+        if (el === null) return;
         el.innerText = el.innerText.split(":")[0] + ":" + value + "\u00A0";
         onMove();
         if (input === null) return;
@@ -94,11 +96,9 @@
 
     const handleCalendar = () => {
         showCalendar = false;
-        const el = getCurrentHighlight();
-        if (el === null) return;
-        setFilterValue(el, calendarDate.toString());
+        setFilterValue(calendarDate.toString());
     };
-    
+
 </script>
 
 <div class="w-full flex items-center relative max-w-3xl mx-auto">

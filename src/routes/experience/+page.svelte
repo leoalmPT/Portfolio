@@ -8,5 +8,5 @@
     tech
     date
     name="Experience"
-    placeholder="Search for titles, descriptions or even technologies..."
+    placeholder="Search for titles, descriptions, dates or even technologies..."
 />

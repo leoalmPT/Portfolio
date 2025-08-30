@@ -7,5 +7,5 @@
     data={papers}
     date
     name="Papers"
-    placeholder="Search for titles or descriptions..."
+    placeholder="Search for titles, descriptions or dates..."
 />

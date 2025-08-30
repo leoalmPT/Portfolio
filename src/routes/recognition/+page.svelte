@@ -8,5 +8,5 @@
     data={[...awards, ...certifications]}
     date
     name="Recognition"
-    placeholder="Search for titles or descriptions..."
+    placeholder="Search for titles, descriptions or dates..."
 />
