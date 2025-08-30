@@ -23,8 +23,8 @@
     });
     let data = originalData
     let query = $state("");
-    let filters = $state({ tech: "", after: "", before: "" });
-    let results = $derived(filter(query, data, filters));
+    let filters = ["tech", "after", "before"];
+    let results = $derived(filter(query, data));
     let categories = $state({
         Experience: true,
         Paper: true,
@@ -38,7 +38,7 @@
 
     const handleSwitch = () => {
         data = originalData.filter(item => categories[item.category as CategoryKey]);
-        results = filter(query, data, filters);
+        results = filter(query, data);
     }
     
     const filterNames = {
@@ -59,7 +59,7 @@
 
 <div in:fly|global={{ y: 100, duration: 500, delay: 100 }}>
     <Search 
-        bind:filters
+        filters={filters}
         bind:query 
         placeholder="Search for titles, descriptions or even technologies..."
     />

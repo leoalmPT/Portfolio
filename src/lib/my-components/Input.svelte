@@ -39,7 +39,8 @@
     };
 
 
-    export const setCaretNext = (el: HTMLDivElement, chars: number) => {
+    export const setCaretNext = (el: HTMLDivElement, offset=0) => {
+        const chars = getCaretPosition(el);
         const text = el.innerText;
         const char = text[chars];
         let pos = chars;
@@ -52,7 +53,7 @@
             }
             pos++;
         }
-        setCaretPosition(el, pos);
+        setCaretPosition(el, pos + offset);
     };
 
 
@@ -89,7 +90,8 @@
         highlightCallback = null,
         onInput = null,
         onKeyDown = null,
-        onHighlight = null
+        onHighlight = null,
+        onMove = null
     } = $props();
 
     const handleCopy = (e: ClipboardEvent) => {
@@ -111,15 +113,16 @@
         setCaretPosition(ref, pos);
     };
 
-    const handleInput = (e: Event) => {
+    const handleInput = () => {
         if (!ref) return;
-        value = (e.target as HTMLDivElement).innerText.replace(/\n/g, "").replaceAll(" ", "\u00A0");
+        value = ref.innerText.replace(/\n/g, "").replaceAll(" ", "\u00A0");
         updateInnerHtml?.();
         onInput?.(value);
     };
 
 
     const handleSelectionChange = () => {
+        onMove?.();
         if (!ref) return;
         const highlightEl = getCurrentHighlight();
         if (highlightEl === null) return;
