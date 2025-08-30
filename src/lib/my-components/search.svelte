@@ -64,14 +64,18 @@
         if (!input) return;
         if (e.key === "Enter" || e.key === "Tab") {
             e.preventDefault();
-            setCaretNext(input, 1);
+            let offset = (showCalendar || showTech) ? 1 : 0;
+            setCaretNext(input, offset);
         }
     };
 
     const handleHighlight = (el: HTMLElement) => {
         const text = el.innerText;
-        if (text.includes("before:")) {
+        if (text.includes("before:") || text.includes("after:")) {
             showCalendar = true;
+        }
+        if (text.includes("tech:")) {
+            showTech = true;
         }
     };
 
@@ -94,11 +98,7 @@
         if (el === null) return;
         setFilterValue(el, calendarDate.toString());
     };
-
-    $effect(() => {
-        calendarDate;
-        handleCalendar();
-    });
+    
 </script>
 
 <div class="w-full flex items-center relative max-w-3xl mx-auto">
@@ -126,6 +126,7 @@
             type="single"
             bind:value={calendarDate} 
             buttonVariant="outline"
+            onValueChange={handleCalendar}
             class="absolute rounded-md border shadow-sm bg-gradient-to-br from-card to-secondary z-50 top-12"
         />
     {/if}

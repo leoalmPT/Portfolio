@@ -53,7 +53,7 @@
             }
             pos++;
         }
-        setCaretPosition(el, pos + offset);
+        setCaretPosition(el, pos < text.length ? pos + offset : pos);
     };
 
 
