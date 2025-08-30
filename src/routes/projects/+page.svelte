@@ -5,7 +5,7 @@
 
 <Items
     data={projects}
-    tech={true}
+    tech
     name="Projects"
     placeholder="Search for titles, descriptions or even technologies..."
 />

@@ -5,7 +5,7 @@
 
 <Items
     data={papers}
-    tech={false}
+    date
     name="Papers"
     placeholder="Search for titles or descriptions..."
 />

@@ -10,11 +10,22 @@
         data,
         name,
         placeholder,
-        tech = false
+        tech = false,
+        date = false,
     } = $props();
 
     let query = $state(page.url.searchParams.get('q') || "");
-    let results = $derived(filter(query, data));
+    type Filters = {
+        tech?: string;
+        after?: string;
+        before?: string;
+        [key: string]: any;
+    };
+    let filters = $state<Filters>({
+        ...(tech ? { tech: "" } : {}),
+        ...(date ? { after: "", before: "" } : {})
+    });
+    let results = $derived(filter(query, data, filters));
     let counter = $derived(results.length*0-1);
     let first = $derived(results.length === 0);
     first = true;
@@ -33,7 +44,7 @@
     class="mb-6"
 >
     <Search 
-        tech={tech}
+        bind:filters
         bind:query 
         placeholder={placeholder}
     />

@@ -6,7 +6,7 @@
 
 <Items
     data={[...awards, ...certifications]}
-    tech={false}
+    date
     name="Recognition"
     placeholder="Search for titles or descriptions..."
 />

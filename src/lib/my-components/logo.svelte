@@ -1,8 +1,27 @@
+<script module lang="ts">
+    import { mode } from "mode-watcher";
+
+    import iconData from "$lib/data/iconData.json";
+
+    const theme = $derived(mode.current ?? 'light');
+
+    export const getSrc = (name: string | undefined) => {
+        if (!name) return undefined;
+        if (iconData.dark.includes(name) && theme === 'dark') {
+            return `/icons/${name}-dark.svg`;
+        }
+        return `/icons/${name}.svg`;
+    }
+
+    export const getDescription = (name: string | undefined) => {
+        return iconData.descriptions[name as keyof IconDescription] ?? name;
+    }
+</script>
+
 <script lang="ts">
     import { Button } from "$lib/components/ui/button/index.js";
     import * as Tooltip from "$lib/components/ui/tooltip/index.js";
-    import { mode } from "mode-watcher";
-    import iconData from "$lib/data/iconData.json";
+
     import { type Skill } from "$lib/data/types";
 
     type IconDescription = typeof iconData.descriptions;
@@ -15,16 +34,8 @@
         size = 2.5,
     } = $props<{ name?: string | Skill, href?: string, link?: boolean, new_window?: boolean, size?: number }>();
 
-    const theme = $derived(mode.current ?? 'light');
-    let getSrc = $derived(() => {
-        if (!name) return undefined;
-        if (iconData.dark.includes(name) && theme === 'dark') {
-            return `/icons/${name}-dark.svg`;
-        }
-        return `/icons/${name}.svg`;
-    });
-    const description = iconData.descriptions[name as keyof IconDescription] ?? name;
-    if (link) href = `/projects?q=tech:${encodeURIComponent(description || name)}`;
+    if (link) href = `/projects?q=tech:${encodeURIComponent(name)}`;
+    const description = getDescription(name);
 </script>
 
 <Tooltip.Provider delayDuration={0}>
@@ -38,7 +49,7 @@
             target={new_window ? "_blank" : undefined}
             rel={new_window ? "noopener noreferrer" : undefined}
         >
-            <img src={getSrc()} alt={name ? String(name) : undefined} />
+            <img src={getSrc(name)} alt={name ? String(name) : undefined} />
         </Button>
     </Tooltip.Trigger>
     {#if description}

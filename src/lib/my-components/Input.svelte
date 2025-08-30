@@ -44,7 +44,10 @@
         const char = text[chars];
         let pos = chars;
         while (pos < text.length) {
-            if ((char === "\u00A0" && text[pos] !== "\u00A0") || (char !== "\u00A0" && text[pos] === "\u00A0")) {
+            if (
+                (char === "\u00A0" && text[pos] !== "\u00A0") || 
+                (char !== "\u00A0" && text[pos] === "\u00A0")
+            ) {
                 break;
             }
             pos++;
@@ -56,12 +59,28 @@
     export const clearInput = (el: HTMLDivElement) => {
         if (!el) return;
         el.innerHTML = "";
-        setCaretPosition(el, 0);
+    };
+
+
+    export const getCurrentHighlight = (): HTMLElement | null => {
+        const selection = window.getSelection();
+        if (!selection || selection.rangeCount === 0) return null;
+        const range = selection.getRangeAt(0);
+        let node = range.startContainer as Node;
+        if (node.nodeType === Node.TEXT_NODE) {
+            node = node.parentElement as Node;
+        }
+        if (node instanceof HTMLElement && node.closest(".highlight-span")) {
+            return node.closest(".highlight-span") as HTMLElement;
+        }
+        return null;
     };
     
 </script>
 
 <script lang="ts">
+
+    import { onMount, onDestroy } from "svelte";
 
     let {
         ref = $bindable(null),
@@ -70,6 +89,7 @@
         highlightCallback = null,
         onInput = null,
         onKeyDown = null,
+        onHighlight = null
     } = $props();
 
     const handleCopy = (e: ClipboardEvent) => {
@@ -80,11 +100,14 @@
 
     const updateInnerHtml = () => {
         if (!ref) return;
-        const pos = getCaretPosition(ref);
-        ref.innerHTML = highlightCallback ? highlightCallback(value) : value;
-        if (ref.innerHTML !== "") {
-            ref.innerHTML = `<span>${ref.innerHTML}</span>`;
+        const html = highlightCallback ? highlightCallback(value) : value;
+        if (html === ref.innerHTML) return;
+        if (html === "") {
+            ref.innerHTML = "";
+            return;
         }
+        const pos = getCaretPosition(ref);
+        ref.innerHTML = `<span>${html}</span>`;
         setCaretPosition(ref, pos);
     };
 
@@ -94,6 +117,26 @@
         updateInnerHtml?.();
         onInput?.(value);
     };
+
+
+    const handleSelectionChange = () => {
+        if (!ref) return;
+        const highlightEl = getCurrentHighlight();
+        if (highlightEl === null) return;
+        onHighlight?.(highlightEl);
+    };
+
+
+    onMount(() => {
+        if (onHighlight) {
+            document.addEventListener("selectionchange", handleSelectionChange);
+        }
+    });
+    onDestroy(() => {
+        if (onHighlight) {
+            document.removeEventListener("selectionchange", handleSelectionChange);
+        }
+    });
 
 </script>
 

@@ -5,7 +5,8 @@
 
 <Items
     data={experiences}
-    tech={true}
+    tech
+    date
     name="Experience"
     placeholder="Search for titles, descriptions or even technologies..."
 />
