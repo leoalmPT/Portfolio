@@ -34,7 +34,7 @@
         size = 2.5,
     } = $props<{ name?: string | Skill, href?: string, link?: boolean, new_window?: boolean, size?: number }>();
 
-    if (link) href = `/projects?q=tech:${encodeURIComponent(name)}`;
+    if (link) href = `/projects?q=tech:${encodeURIComponent(name.toLowerCase())}`;
     const description = getDescription(name);
 </script>
 

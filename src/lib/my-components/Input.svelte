@@ -156,4 +156,8 @@
     oncopy={handleCopy}
     onkeydown={onKeyDown}
     class="text-base px-10 focus:ring-primary focus:ring-3 bg-gradient-to-br from-card to-secondary w-full border border-input py-1 rounded-md h-9 flex items-center outline-none"
-></div>
+>
+    {#if value !== ""}
+        <span>{@html highlightCallback ? highlightCallback(value) : value}</span>
+    {/if}
+</div>

@@ -24,7 +24,7 @@
     let data = originalData
     let query = $state("");
     let filters = ["tech", "after", "before"];
-    let results = $derived(filter(query, data));
+    let results = $derived(filter(query, data, false));
     let categories = $state({
         Experience: true,
         Paper: true,
@@ -38,7 +38,7 @@
 
     const handleSwitch = () => {
         data = originalData.filter(item => categories[item.category as CategoryKey]);
-        results = filter(query, data);
+        results = filter(query, data, false);
     }
     
     const filterNames = {

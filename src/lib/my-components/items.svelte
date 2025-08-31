@@ -19,7 +19,7 @@
         ...(tech ? ["tech"] : []),
         ...(date ? ["after", "before"] : [])
     ]
-    let results = $derived(filter(query, data));
+    let results = $derived(filter(query, data, true));
     let counter = $derived(results.length*0-1);
     let first = $derived(results.length === 0);
     first = true;
