@@ -9,12 +9,12 @@
         const tech = q.match(/tech:([\w\-\/]*)/)?.[1];
         if (before) {
             data = data.filter(item => {
-                return new Date(item.date) < new Date(before);
+                return item.date ? new Date(item.date) < new Date(before) : true;
             });
         }
         if (after) {
             data = data.filter(item => {
-                return new Date(item.date) > new Date(after);
+                return item.date ? new Date(item.date) > new Date(after) : true;
             });
         }
         if (tech) {
