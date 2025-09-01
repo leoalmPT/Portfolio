@@ -11,6 +11,8 @@
 <script lang="ts">
     import { page } from '$app/state';
     import Calendar from "@lucide/svelte/icons/calendar";
+    import Building2 from "@lucide/svelte/icons/building-2";
+    import NotebookPen from "@lucide/svelte/icons/notebook-pen";
     import { fly } from 'svelte/transition';
 
     import { type Item as ItemType } from "$lib/data/types";
@@ -33,15 +35,29 @@
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <div class="text-5xl font-bold">{item.title}</div>
-            {#if item.date}
-                <div class="flex gap-2">
-                    <Calendar size={22} />
-                    {getDate(item.date)}
-                    {#if item.endDate}
-                        - {getDate(item.endDate)}
-                    {/if}
-                </div>
-            {/if}
+            <div class="flex flex-wrap gap-x-4">
+                {#if item.company}
+                    <div class="flex gap-2 mt-2">
+                        <Building2 size={22} />
+                        {item.company}
+                    </div>
+                {/if}
+                {#if item.publisher}
+                    <div class="flex gap-2 mt-2">
+                        <NotebookPen size={22} />
+                        {item.publisher}
+                    </div>
+                {/if}
+                {#if item.date}
+                    <div class="flex gap-2 mt-2">
+                        <Calendar size={22} />
+                        {getDate(item.date)}
+                        {#if item.endDate}
+                            - {getDate(item.endDate)}
+                        {/if}
+                    </div>
+                {/if}
+            </div>
             {#if item.skills}
                 <div class="flex flex-wrap gap-2 justify-center">
                     {#each item.skills as skill}

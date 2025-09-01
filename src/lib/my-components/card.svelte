@@ -1,5 +1,7 @@
 <script lang="ts">
     import Calendar from "@lucide/svelte/icons/calendar";
+    import Building2 from "@lucide/svelte/icons/building-2";
+    import NotebookPen from "@lucide/svelte/icons/notebook-pen";
 
     import { type Item } from "$lib/data/types";
     import { getDate } from "$lib/my-components//item.svelte";
@@ -27,35 +29,51 @@
     href={href}
 >
     <div 
-        class="absolute top-0 right-0 w-1/2 h-24 opacity-50"
+        class="absolute top-0 right-0 w-1/2 h-24 opacity-50 z-0"
         style={`background: radial-gradient(ellipse 100% 100% at top right, ${color} 0%, transparent 100%);`}
     ></div>
     
-    <div class="font-bold text-lg truncate flex-1">
-        {item.title}
-    </div>
-    {#if item.date}
-        <div class="flex gap-2 mt-2">
-            <Calendar size={22} />
-            {getDate(item.date)}
-            {#if item.endDate}
-                - {getDate(item.endDate)}
+    <div class="w-full relative z-10">
+        <div class="font-bold text-lg truncate flex-1">
+            {item.title}
+        </div>
+        <div class="flex flex-wrap gap-x-4">
+            {#if item.company}
+                <div class="flex gap-2 mt-2">
+                    <Building2 size={22} />
+                    {item.company}
+                </div>
+            {/if}
+            {#if item.publisher}
+                <div class="flex gap-2 mt-2">
+                    <NotebookPen size={22} />
+                    {item.publisher}
+                </div>
+            {/if}
+            {#if item.date}
+                <div class="flex gap-2 mt-2">
+                    <Calendar size={22} />
+                    {getDate(item.date)}
+                    {#if item.endDate}
+                        - {getDate(item.endDate)}
+                    {/if}
+                </div>
             {/if}
         </div>
-    {/if}
 
-    <div class="my-2 border" ></div>
+        <div class="my-2 border" ></div>
 
-    <div class="line-clamp-5 h-30">
-        {@html item.description}
-    </div>
-
-    {#if item.skills}
-        <div class="mt-2 mb-3 border" ></div>
-        <div class="flex gap-2 overflow-hidden p-1 -m-1">
-            {#each item.skills as skill}
-                <Logo name={skill} link />
-            {/each}
+        <div class="line-clamp-5 h-30">
+            {@html item.description}
         </div>
-    {/if}
+
+        {#if item.skills}
+            <div class="mt-2 mb-3 border" ></div>
+            <div class="flex gap-2 overflow-hidden p-1 -m-1">
+                {#each item.skills as skill}
+                    <Logo name={skill} link />
+                {/each}
+            </div>
+        {/if}
+    </div>
 </a>

@@ -10,7 +10,8 @@ export const experiences: Experience[] = [
         content: content1,
         date: "2022-01-01",
         skills: ["Svelte", "Proxmox", "MQTT"],
-        endDate: "Present"
+        endDate: "Present",
+        company: "Some University"
     }
 ];
 

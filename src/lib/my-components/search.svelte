@@ -88,9 +88,6 @@
         }
         timeoutId = setTimeout(() => {
             query = value.replaceAll("\u00A0", " ").trim();
-            // if (!showCalendar && !showTech && focused) {
-            //     showMenu = true;
-            // }
         }, 500);
     };
 

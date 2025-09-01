@@ -34,13 +34,13 @@ export interface Experience extends Base {
     skills: Skill[];
     date: string;
     endDate: string;
-    // company: string;
+    company: string;
 }
 
 export interface Paper extends Base {
     date: string;
+    publisher: string;
     // authors: string[];
-    // publisher: string;
 }
 
 export interface Award extends Base {
