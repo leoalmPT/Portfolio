@@ -6,7 +6,7 @@ export const experiences: Experience[] = [
     {
         id: "experience-1",
         title: "Researcher",
-        description:  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        description:  "book.",
         content: content1,
         date: "2022-01-01",
         skills: ["Svelte", "Proxmox", "MQTT"],
