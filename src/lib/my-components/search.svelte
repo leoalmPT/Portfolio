@@ -25,7 +25,7 @@
         if (input === "") return data;
         const fuse = new Fuse(data, {
             keys: ['title', 'description'],
-            threshold: 0.3,
+            threshold: 0.2,
             shouldSort: sortByMatch,
             findAllMatches: true,
             ignoreLocation: true,
@@ -65,12 +65,18 @@
     const regex = new RegExp(`\\b(?:${filters.join("|")}):[\\w\\-/]*`, "g");
     let matchSkills = $state([...Skills]);
 
-    const menuOpts = [
-        { label: "before:", description: "Filter by date before (YYYY-MM-DD)" },
-        { label: "after:", description: "Filter by date after (YYYY-MM-DD)" },
-        { label: "tech:", description: "Filter by technology (e.g., React, Svelte, Node.js)" }
-    ]
+    const allMenuOpts = {
+        before: { label: "before:", description: "Filter by date before (YYYY-MM-DD)" },
+        after: { label: "after:", description: "Filter by date after (YYYY-MM-DD)" },
+        tech: { label: "tech:", description: "Filter by technology (e.g., React, Svelte, Node.js)" }
+    };
 
+    const menuOpts: Array<{ label: string; description: string }> = [];
+    for (const key in allMenuOpts) {
+        if (filters.includes(key)) {
+            menuOpts.push(allMenuOpts[key as keyof typeof allMenuOpts]);
+        }
+    }
 
     const forceUpdate = () => {
         if (input) input.dispatchEvent(new Event("input", { bubbles: true }));
@@ -212,7 +218,7 @@
             onclick={resetQuery}
         />
     {/if}
-    {#if showMenu}
+    {#if showMenu && menuOpts.length > 0}
         <div 
             class="absolute rounded-md border bg-gradient-to-br from-card to-secondary z-50 top-12 w-full ring ring-primary overflow-hidden"
             in:fade={{ duration: 150 }}

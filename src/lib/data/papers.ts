@@ -1,34 +1,17 @@
 import {type Paper} from './types';
 
+import sensors2025 from "$lib/md/papers/sensors2025.md";
+
 export const papers: Paper[] = [
     {
-        id: "paper-1",
-        title: "Paper 1 sddssddssdsdsdsdds",
-        description: "Description for paper 1",
-        date: "2022-01-01",
-        publisher: "Some Publisher"
+        id: "sensors2025",
+        title: "Federated Learning for a Dynamic Edge: A Modular and Resilient Approach",
+        date: "2025-06",
+        publisher: "MDPI, Sensors",
+        description: "Implemented a Federated Learning framework with multiple algorithms and communication protocols. Evaluation shows fault tolerance, efficient communication, and model convergence with worker failures.",
+        authors: ["Leonardo Almeida", "Rafael Teixeira", "Gabriele Baldoni", "Mário Antunes", "Rui L. Aguiar"],
+        content: sensors2025
     },
-    {
-        id: "paper-2",
-        title: "Paper 2",
-        description: "Description for paper 2",
-        date: "2022-02-01",
-        publisher: "Some Publisher"
-    },
-    {
-        id: "paper-3",
-        title: "Paper 3",
-        description: "Description for paper 1",
-        date: "2022-01-01",
-        publisher: "Some Publisher"
-    },
-    {
-        id: "paper-4",
-        title: "Paper 4",
-        description: "Description for paper 2",
-        date: "2022-02-01",
-        publisher: "Some Publisher"
-    }
 ];
 
 papers.forEach(paper => {

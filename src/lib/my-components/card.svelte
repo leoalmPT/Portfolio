@@ -24,8 +24,9 @@
     const href = (hrefs[item.category as keyof typeof hrefs] || "/notfound") + (item.id ? "/" + item.id : "");
 </script>
 
+
 <a 
-    class="w-full max-w-xl fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden hover:border-primary block"
+    class="mycard w-full max-w-xl fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden block hover:border-primary"
     href={href}
 >
     <div 
@@ -34,7 +35,7 @@
     ></div>
     
     <div class="w-full relative z-10">
-        <div class="font-bold text-lg truncate flex-1">
+        <div class="font-bold text-lg line-clamp-2 flex-1">
             {item.title}
         </div>
         <div class="flex flex-wrap gap-x-4">
@@ -61,14 +62,19 @@
             {/if}
         </div>
 
-        <div class="my-2 border" ></div>
+        <div 
+            class="my-3 border"
+        ></div>
 
-        <div class="line-clamp-5 h-30">
+        <div class="line-clamp-6 h-36">
             {@html item.description}
         </div>
 
         {#if item.skills}
-            <div class="mt-2 mb-3 border" ></div>
+            <div 
+                class="mt-2 mb-3 border" 
+
+            ></div>
             <div class="flex gap-2 overflow-hidden p-1 -m-1">
                 {#each item.skills as skill}
                     <Logo name={skill} link />

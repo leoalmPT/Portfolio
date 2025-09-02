@@ -40,7 +40,7 @@ export interface Experience extends Base {
 export interface Paper extends Base {
     date: string;
     publisher: string;
-    // authors: string[];
+    authors: string[];
 }
 
 export interface Award extends Base {
