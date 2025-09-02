@@ -23,13 +23,13 @@ export const projects: Project[] = [
         id: "project-4",
         title: "Project 4",
         description: "Description for project 2",
-        skills: ["Python", "Cpp"]
+        skills: ["Python"]
     },
     {
         id: "project-5",
         title: "Project 5",
         description: "Description for project 2",
-        skills: ["Python", "Cpp"]
+        skills: ["Cpp"]
     },
     {
         id: "project-6",

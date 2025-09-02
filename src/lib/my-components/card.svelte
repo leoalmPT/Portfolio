@@ -66,7 +66,7 @@
             class="my-3 border"
         ></div>
 
-        <div class="line-clamp-6 h-36">
+        <div class="line-clamp-6 min-h-24">
             {@html item.description}
         </div>
 

@@ -19,7 +19,7 @@
         switches = false
     } = $props();
 
-    let query = $state(page.url.searchParams.get('q') || "");
+    let query = $derived(page.url.searchParams.get('q') || "");
     const filters = [
         ...(tech ? ["tech"] : []),
         ...(date ? ["after", "before"] : [])
@@ -66,11 +66,13 @@
     in:fly|global={{ y: 100, duration: 500, delay: 100 }}
     class="mb-4"
 >
-    <Search 
-        filters={filters}
-        bind:query 
-        placeholder={placeholder}
-    />
+    {#key page.url.searchParams.get("q")}
+        <Search 
+            filters={filters}
+            bind:query 
+            placeholder={placeholder}
+        />
+    {/key}
 </div>
 
 {#if switches}

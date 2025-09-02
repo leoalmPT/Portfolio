@@ -96,7 +96,7 @@
 
         <div in:fly|global={{ y: 100, duration: 500, delay: 200 }}>
             {#if item.content}
-                <div class="prose max-w-none dark:prose-invert ">
+                <div class="prose max-w-none dark:prose-invert prose-a:text-primary">
                     <item.content />
                 </div>
             {:else}
