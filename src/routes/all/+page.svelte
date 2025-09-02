@@ -11,6 +11,7 @@
     data={[...experiences, ...papers, ...awards, ...certifications, ...projects]}
     tech
     date
+    switches
     name="Contents"
     placeholder="Search for titles, descriptions, dates or even technologies..."
 />

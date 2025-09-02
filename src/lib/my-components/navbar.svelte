@@ -81,7 +81,7 @@
                             </NavigationMenu.Link>
                         {/each}
                     </ul>
-                    <div class="p-2 flex justify-center">
+                    <div class="p-2 pt-0 flex justify-center">
                         <Button variant="outline" href="/all" class="!text-base hover:!border-primary w-full">
                             View All
                         </Button>

@@ -18,9 +18,16 @@
             });
         }
         if (tech) {
-            data = data.filter(item => {
+            const data_ = data.filter(item => {
                 return item.skills?.map((t: string) => t.toLowerCase()).includes(tech.toLowerCase());
             });
+            if (data_.length !== 0) {
+                data = data_;
+            } else {
+                data = data.filter(item => {
+                    return item.skills?.some((t: string) => t.toLowerCase().includes(tech.toLowerCase()));
+                });
+            }
         }
         if (input === "") return data;
         const fuse = new Fuse(data, {
