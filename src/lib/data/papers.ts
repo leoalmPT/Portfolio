@@ -4,6 +4,7 @@ import sensors2025 from "$lib/md/papers/sensors2025.md";
 import bigdata2025 from "$lib/md/papers/bigdata2025.md";
 import dcc2025 from "$lib/md/papers/dcc2025.md";
 import globecom2024 from "$lib/md/papers/globecom2024.md";
+import ficloud2024 from "$lib/md/papers/ficloud.md";
 
 export const papers: Paper[] = [
     {
@@ -47,8 +48,9 @@ export const papers: Paper[] = [
         title: "Shallow vs. Deep Learning: Prioritizing Efficiency in Next Generation Networks",
         date: "2024-08-19",
         publisher: "FiCloud 2024",
-        description: "",
-        authors: ["Rafael Teixeira", "Leonardo Almeida", "Pedro Rodrigues", "Mário Antunes", "Diogo Gomes", "Rui L. Aguiar"]
+        description: "Comparison of shallow and deep learning models. Results show that shallow models achieve comparable performance with over 90% faster training and prediction times",
+        authors: ["Rafael Teixeira", "Leonardo Almeida", "Pedro Rodrigues", "Mário Antunes", "Diogo Gomes", "Rui L. Aguiar"],
+        content: ficloud2024
     },
     {
         id: "melecon2024",

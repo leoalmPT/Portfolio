@@ -28,7 +28,6 @@ The study applied the three XAI techniques to thirteen different ML models (Clas
 
 <img src="/files/papers/globecom2024/correlation.png" alt="XAI Correlation High Performance" width="600" />
 
-
 ### Energy consumption ratios (XAI explanation cost relative to ML inference cost).
 
 <img src="/files/papers/globecom2024/energy.png" alt="Energy Consumption Ratios" width="600" />
