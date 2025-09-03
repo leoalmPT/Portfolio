@@ -2,6 +2,7 @@ import {type Paper} from './types';
 
 import sensors2025 from "$lib/md/papers/sensors2025.md";
 import bigdata2025 from "$lib/md/papers/bigdata2025.md";
+import dcc2025 from "$lib/md/papers/dcc2025.md";
 
 export const papers: Paper[] = [
     {
@@ -27,8 +28,9 @@ export const papers: Paper[] = [
         title: "AIDetx: A Compression-Based Method for Identification of Machine-Learning Generated Text",
         date: "2025-03-18",
         publisher: "2025 Data Compression Conference",
-        description: "",
-        authors: ["Leonardo Almeida", "Pedro Rodrigues", "Diogo Magalhães", "Armando J. Pinho", "Diogo Pratas"]
+        description: "AIDetx introduces a compression-based method utilizing finite-context models to efficiently and interpretably detect machine-generated text, without requiring GPUs.",
+        authors: ["Leonardo Almeida", "Pedro Rodrigues", "Diogo Magalhães", "Armando J. Pinho", "Diogo Pratas"],
+        content: dcc2025
     },
     {
         id: "globecom2024",
