@@ -1,10 +1,12 @@
-import {type Paper} from './types';
+import { type Paper } from "$lib/data/types";
 
 import sensors2025 from "$lib/md/papers/sensors2025.md";
 import bigdata2025 from "$lib/md/papers/bigdata2025.md";
 import dcc2025 from "$lib/md/papers/dcc2025.md";
 import globecom2024 from "$lib/md/papers/globecom2024.md";
 import ficloud2024 from "$lib/md/papers/ficloud.md";
+import melecon2024 from "$lib/md/papers/melecon2024.md";
+
 
 export const papers: Paper[] = [
     {
@@ -57,8 +59,9 @@ export const papers: Paper[] = [
         title: "Privacy-Preserving Defense: Intrusion Detection in IoT using Federated Learning",
         date: "2024-06-25",
         publisher: "2024 IEEE MELECON",
-        description: "",
-        authors: ["Leonardo Almeida", "Pedro Rodrigues", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"]
+        description: "Federated Learning for privacy-preserving Intrusion Detection Systems in IoT. Results show that FL-based training achieves comparable performance and faster convergence than centralized methods.",
+        authors: ["Leonardo Almeida", "Pedro Rodrigues", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"],
+        content: melecon2024
     }
 ];
 
