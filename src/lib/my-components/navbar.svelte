@@ -35,7 +35,35 @@
         }
     ];
 
+    let canChange = $state(true);
+    let showClock = $state(false);
+
+    const handleTheme = () => {
+        if (!canChange) return;
+        toggleMode();
+        showClock = true;
+        canChange = false;
+        setTimeout(() => {
+            showClock = false;
+            toggleMode();
+            canChange = true;
+        }, 5000);
+    }
+
 </script>
+
+
+{#if showClock}
+    <div class="fixed z-50 flex h-full w-full items-center justify-center top-0 left-0">
+        <dotlottie-wc
+            src="https://lottie.host/c6e7a4a0-aaef-430b-a8b6-a6a8ff17b5be/CX7GKEk8LV.lottie"
+            style="width: 500px;height: 500px"
+            speed="1"
+            autoplay
+        ></dotlottie-wc>
+    </div>
+{/if}
+
 
 <div class="w-full p-2 border-b-2 bg-background/50 backdrop-blur-md z-50">
     <div class="w-full container mx-auto">
@@ -92,7 +120,7 @@
 
             <NavigationMenu.List class="ml-auto justify-self-end">
             <NavigationMenu.Item>
-                <Button onclick={toggleMode} variant="outline" size="icon" class="bg-transparent p-0 hover:!border-primary hover:cursor-pointer">
+                <Button onclick={handleTheme} variant="outline" size="icon" class="bg-transparent p-0 hover:!border-primary hover:cursor-pointer">
                     <SunIcon
                         class="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 !transition-all dark:-rotate-90 dark:scale-0"
                     />

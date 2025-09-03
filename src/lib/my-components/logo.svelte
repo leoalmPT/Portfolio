@@ -3,7 +3,7 @@
 
     import iconData from "$lib/data/iconData.json";
 
-    const theme = $derived(mode.current ?? 'light');
+    const theme = $derived(mode.current ?? 'dark');
 
     export const getSrc = (name: string | undefined) => {
         if (!name) return undefined;

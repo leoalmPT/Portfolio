@@ -3,6 +3,7 @@ import {type Paper} from './types';
 import sensors2025 from "$lib/md/papers/sensors2025.md";
 import bigdata2025 from "$lib/md/papers/bigdata2025.md";
 import dcc2025 from "$lib/md/papers/dcc2025.md";
+import globecom2024 from "$lib/md/papers/globecom2024.md";
 
 export const papers: Paper[] = [
     {
@@ -37,8 +38,9 @@ export const papers: Paper[] = [
         title: "From Black Box to Transparency: Consistency and Cost within XAI",
         date: "2024-12-08",
         publisher: "2024 IEEE Globecom Workshops",
-        description: "",
-        authors: ["Julio Corona", "Pedro Rodrigues", "Leonardo Almeida", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"]
+        description: "Evaluation of consistency, temporal efficiency, and energy costs of SHAP, LIME, and Permutation Importance for explaining ML models. XAI methods can disagree on feature relevance.",
+        authors: ["Julio Corona", "Pedro Rodrigues", "Leonardo Almeida", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"],
+        content: globecom2024
     },
     {
         id: "ficloud2024",
