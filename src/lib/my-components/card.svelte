@@ -40,15 +40,19 @@
         </div>
         <div class="flex flex-wrap gap-x-4">
             {#if item.company}
-                <div class="flex gap-2 mt-2">
+                <div class="flex gap-2 mt-2 overflow-hidden">
                     <Building2 size={22} />
-                    {item.company}
+                    <div class="truncate">
+                        {item.company}
+                    </div>
                 </div>
             {/if}
             {#if item.publisher}
-                <div class="flex gap-2 mt-2">
+                <div class="flex gap-2 mt-2 overflow-hidden">
                     <NotebookPen size={22} />
-                    {item.publisher}
+                    <div class="truncate">
+                        {item.publisher}
+                    </div>
                 </div>
             {/if}
             {#if item.date}
