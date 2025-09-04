@@ -27,7 +27,8 @@
 
     const id = page.params.id;
     const item = data.find((item: ItemType) => item.id === id);
-    const color = itemColors[item.category as keyof typeof itemColors];
+    let color = $state("");
+    if (item) color = itemColors[item.category as keyof typeof itemColors];
 </script>
 
 {#if item}
