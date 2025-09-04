@@ -7,7 +7,7 @@ import globecom2024 from "$lib/md/papers/globecom2024.md";
 import ficloud2024 from "$lib/md/papers/ficloud.md";
 import melecon2024 from "$lib/md/papers/melecon2024.md";
 import icctfl2025 from "$lib/md/papers/icctfl2025.md";
-
+import icctmlops2025 from "$lib/md/papers/icctmlops.md";
 
 export const papers: Paper[] = [
     {
@@ -81,8 +81,9 @@ export const papers: Paper[] = [
         title: "Optimised Task Placement for MLOps",
         date: "2025-04",
         publisher: "ICCT-Europe 2025",
-        description: "",
+        description: "Optimized task placement system for MLOps pipelines in heterogeneous environments, using SJF scheduling and heuristic-based task assignment to reduce overall execution and average waiting times compared to traditional strategies.",
         authors: ["Pedro Rodrigues", "Leonardo Almeida", "Julio Corona", "Mário Antunes", "Rui L. Aguiar"],
+        content: icctmlops2025
     },
     // {
     //     id: "wimob2025",
