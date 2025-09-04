@@ -2,6 +2,7 @@
 	import '../app.css';
 	import { ModeWatcher } from "mode-watcher";
 	import { beforeNavigate } from '$app/navigation';
+	import { page } from '$app/state';
 
 	import favicon from '$lib/assets/favicon.svg';
 	import Navbar from '$lib/my-components/navbar.svelte';
@@ -9,6 +10,7 @@
 	
 	let { children } = $props();
 	let scrollContainer : HTMLDivElement;
+	let pathname = $derived(page.url.pathname.split('/')[1] || 'home');
 
 	beforeNavigate((nav) => {
 		if (!scrollContainer) return;
@@ -26,6 +28,9 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>Portfolio | {pathname.charAt(0).toUpperCase() + pathname.slice(1)} </title>
+	<meta name="description" content="Personal Portfolio" />
+	<meta name="author" content="Leonardo Almeida" />
 </svelte:head>
 
 <ModeWatcher defaultMode="dark" />
