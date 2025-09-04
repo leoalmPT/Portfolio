@@ -6,6 +6,7 @@ import dcc2025 from "$lib/md/papers/dcc2025.md";
 import globecom2024 from "$lib/md/papers/globecom2024.md";
 import ficloud2024 from "$lib/md/papers/ficloud.md";
 import melecon2024 from "$lib/md/papers/melecon2024.md";
+import icctfl2025 from "$lib/md/papers/icctfl2025.md";
 
 
 export const papers: Paper[] = [
@@ -62,7 +63,36 @@ export const papers: Paper[] = [
         description: "Federated Learning for privacy-preserving Intrusion Detection Systems in IoT. Results show that FL-based training achieves comparable performance and faster convergence than centralized methods.",
         authors: ["Leonardo Almeida", "Pedro Rodrigues", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"],
         content: melecon2024
-    }
+    },
+    //
+    // Not indexed papers
+    //
+    {
+        id: "icctfl2025",
+        title: "Resilient Federated Learning Framework for 6G",
+        date: "2025-04",
+        publisher: "ICCT-Europe 2025",
+        description: "Resilient Federated Learning framework for 6G and IoT, leveraging Zenoh for efficient communication. It demonstrates improved training speed and reliability, with simulated node failures.",
+        authors: ["Leonardo Almeida", "Pedro Rodrigues", "Mário Antunes", "Rui L. Aguiar"],
+        content: icctfl2025
+    },
+    {
+        id: "icctmlops2025",
+        title: "Optimised Task Placement for MLOps",
+        date: "2025-04",
+        publisher: "ICCT-Europe 2025",
+        description: "",
+        authors: ["Pedro Rodrigues", "Leonardo Almeida", "Julio Corona", "Mário Antunes", "Rui L. Aguiar"],
+    },
+    // {
+    //     id: "wimob2025",
+    //     title: "Understanding What Federated Learning Models Learn: a Comparative Study with Traditional Models",
+    //     date: "2025-10",
+    //     publisher: "IEEE WiMob 2025",
+    //     description: "",
+    //     authors: ["Rafael Teixeira", "Leonardo Almeida", "Pedro Rodrigues", "Julio Corona", "Mário Antunes", "Rui L. Aguiar"],
+    // }
+
 ];
 
 papers.forEach(paper => {

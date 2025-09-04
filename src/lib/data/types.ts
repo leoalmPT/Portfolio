@@ -1,4 +1,5 @@
 type MarkdownComponentType = typeof import("*.md")["default"];
+type SVXComponentType = typeof import("*.svx")["default"];
 
 
 export const Skills = [
@@ -21,7 +22,7 @@ interface Base {
     id: string;
     title: string;
     description: string;
-    content?: MarkdownComponentType;
+    content?: MarkdownComponentType | SVXComponentType;
     // media?: string[];
     category?: "Award" | "Experience" | "Paper" | "Certification" | "Project";
 }
