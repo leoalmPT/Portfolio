@@ -10,7 +10,7 @@ export const experiences: Experience[] = [
         date: "2023-09",
         endDate: "2025-08",
         company: "University of Aveiro and Instituto de Telecomunicações",
-        skills: ["Proxmox", "Git", "UV", "Python", "Docker", "TensorFlow", "Keras", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Kafka", "MQTT", "Zenoh", "MPI"],
+        skills: ["Proxmox", "Python", "UV", "Docker", "TensorFlow", "Keras", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Kafka", "MQTT", "Zenoh", "MPI", "Git",],
         content: researcher
     }
 ];
