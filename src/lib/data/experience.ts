@@ -1,17 +1,17 @@
 import { type Experience } from "$lib/data/types";
 
-import content1 from "$lib/md/experience/1.md";
+import researcher from "$lib/md/experience/researcher.md";
 
 export const experiences: Experience[] = [
     {
-        id: "experience-1",
+        id: "researcher",
         title: "Researcher",
-        description:  "book.",
-        content: content1,
-        date: "2022-01-01",
-        skills: ["Svelte", "Proxmox", "MQTT"],
-        endDate: "Present",
-        company: "Some University"
+        description: "Researcher for two years, contributed to 9 papers, developed Federated Learning frameworks, designed experimental environments, and mentored bachelor's students final project.",
+        date: "2023-09",
+        endDate: "2025-08",
+        company: "University of Aveiro and Instituto de Telecomunicações",
+        skills: ["Proxmox", "Git", "UV", "Python", "Docker", "TensorFlow", "Keras", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Kafka", "MQTT", "Zenoh", "MPI"],
+        content: researcher
     }
 ];
 

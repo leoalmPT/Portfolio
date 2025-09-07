@@ -48,13 +48,13 @@
             <div class="flex flex-wrap gap-x-4 gap-y-2">
                 {#if item.company}
                     <div class="flex gap-2">
-                        <Building2 size={22} />
+                        <Building2 size={22} class="shrink-0" />
                         {item.company}
                     </div>
                 {/if}
                 {#if item.publisher}
                     <div class="flex gap-2">
-                        <NotebookPen size={22} />
+                        <NotebookPen size={22} class="shrink-0" />
                         {item.publisher}
                     </div>
                 {/if}

@@ -18,6 +18,6 @@ Our work investigates the viability of **shallow Machine Learning (ML) models** 
 
 This research underscores that for many 5G/B5G networking tasks, less complex shallow ML models can offer a highly efficient and effective solution, avoiding the computational overhead associated with deep learning while maintaining high performance.
 
-## Takeaway
+## Final Thoughts
 
 This work provides compelling evidence that **shallow Machine Learning models are highly effective and significantly more efficient** for critical 5G/B5G networking tasks like network slicing and intrusion detection. By demonstrating comparable performance to deep learning models with drastically reduced training and inference times (over 90% acceleration) and lower hardware requirements, the paper advocates for prioritizing efficiency, especially in real-time, resource-constrained environments. This research bridges a crucial gap, guiding future ML deployments in next-generation networks towards more practical and sustainable solutions.

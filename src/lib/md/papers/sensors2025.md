@@ -26,6 +26,6 @@ The results showed that the system can maintain convergence with high accuracy (
 
 <img src="/files/papers/sensors2025/loss.png" alt="Validation Loss" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This work demonstrates how a **modular and fault-tolerant design** can make federated learning practical for **real-world IoT and edge computing environments**, bridging the gap between research frameworks and production-ready deployments.

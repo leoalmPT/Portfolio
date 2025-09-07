@@ -12,7 +12,7 @@ export const Skills = [
     // Full Stack
     "HTML", "CSS", "React", "Svelte", "Angular", "Django", "SpringBoot", "FastAPI", "Flask",
     // Data & Messaging
-    "PostgreSQL", "MySQL", "MongoDB", "Redis", "RabbitMQ", "Kafka", "MQTT", "MPI"
+    "PostgreSQL", "MySQL", "MongoDB", "Redis", "RabbitMQ", "Kafka", "MQTT", "MPI", "Zenoh",
 ] as const;
 
 export type Skill = typeof Skills[number];

@@ -34,6 +34,6 @@ The experimental setup involved preprocessing datasets by removing irrelevant fe
 
 <img src="/files/papers/melecon2024/times.png" alt="Training Times Early Stop" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This work conclusively demonstrates the **feasibility and effectiveness of Federated Learning** as a privacy-preserving defense mechanism for Intrusion Detection Systems in IoT networks. By achieving comparable performance to centralized training while offering significantly faster convergence and allowing data to remain local, FL provides a robust framework to enhance network security and mitigate privacy concerns inherent in distributed, resource-constrained IoT environments.

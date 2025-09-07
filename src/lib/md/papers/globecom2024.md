@@ -32,6 +32,6 @@ The study applied the three XAI techniques to thirteen different ML models (Clas
 
 <img src="/files/papers/globecom2024/energy.png" alt="Energy Consumption Ratios" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This research provides crucial insights into the practical deployment of XAI, especially in dynamic environments like 5G/6G networks. It underscores that while XAI is essential for transparency and auditability, its application requires careful consideration of **computational costs and the potential for disagreement among different explanation methods**. To ensure robust and reliable explanations, practitioners should consider **employing multiple XAI techniques** and carefully balancing the frequency of XAI usage against its resource demands.

@@ -20,6 +20,6 @@ The study compares traditional learning with four FL algorithms using datasets f
 
 <img src="/files/papers/bigdata2025/plot.png" alt="Plot" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This research demonstrates that Federated Learning approaches are not universally optimal, with their effectiveness highly dependent on the specific FL algorithm chosen, dataset characteristics, and network conditions. While FL can substantially accelerate training and reduce data transfer in certain scenarios, it can also lead to significant slowdowns and communication overhead if not carefully selected and implemented.

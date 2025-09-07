@@ -59,6 +59,7 @@
             "MongoDB",
             "Redis",
             "RabbitMQ",
+            "Zenoh",
             "Kafka",
             "MQTT",
             "MPI"

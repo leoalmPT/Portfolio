@@ -38,6 +38,6 @@ Our work proposes a novel **task placement system for ML pipelines** that automa
 
 <img src="/files/papers/icctmlops2025/avgtime.png" alt="Average Waiting Time Comparison" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This work presents a critical advancement in MLOps by introducing an intelligent task placement system that effectively manages heterogeneous computing resources. By automating the scheduling and assignment of ML pipeline tasks, the system significantly **reduces execution times and waiting times**, making ML model development and deployment substantially more efficient. This approach is vital for accelerating MLOps workflows in modern, diverse computing environments, bridging a key gap in current platforms.

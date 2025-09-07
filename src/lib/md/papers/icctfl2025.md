@@ -44,6 +44,6 @@ Status:
 
 <img src="/files/papers/icctfl2025/loss.png" alt="Validation Loss Curve" width="600" />
 
-## Takeaway
+## Final Thoughts
 
 This work presents a foundational modular and resilient Federated Learning framework that effectively addresses key challenges in 6G and IoT environments. By integrating an efficient communication protocol like **Zenoh** and demonstrating robust performance under worker failures, this framework provides a practical and scalable solution for deploying AI workloads at the edge, paving the way for more reliable and privacy-preserving distributed learning in next-generation networks.
