@@ -43,7 +43,9 @@
 		bind:this={scrollContainer}
 	>
 		<div class="flex-1 container mx-auto my-6 p-6 bg-background/50 backdrop-blur-md rounded-4xl border-2 flex flex-col">
-			{@render children?.()}
+			{#key page.url.pathname}
+				{@render children?.()}
+			{/key}
 		</div>
 	</div>
 </div>
