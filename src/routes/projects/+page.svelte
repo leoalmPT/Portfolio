@@ -7,5 +7,6 @@
     data={projects}
     tech
     name="Projects"
+    shuffle
     placeholder="Search for titles, descriptions or even technologies..."
 />

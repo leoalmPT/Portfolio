@@ -16,9 +16,13 @@
         placeholder,
         tech = false,
         date = false,
-        switches = false
+        switches = false,
+        shuffle = false
     } = $props();
 
+    if (shuffle) {
+        data = data.sort(() => Math.random() - 0.5);
+    }
     let query = $derived(page.url.searchParams.get('q') || "");
     const filters = [
         ...(tech ? ["tech"] : []),

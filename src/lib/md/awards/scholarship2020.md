@@ -1,0 +1,5 @@
+## Overview
+
+This prestigious academic merit scholarship is awarded by the University of Aveiro to recognize outstanding academic achievement at the point of entry. It is granted to students who select the University of Aveiro as their first choice in the 1st national application stage and achieve an average entry grade of 17.5 or higher. I was honored to receive this scholarship upon entering my Bachelor's degree program, having achieved an impressive **average entry grade of 18.95 out of 20**.
+
+This scholarship not only provided significant financial support, allowing me to focus intensely on my studies and research, but also served as a powerful validation of my academic capabilities and a continuous motivation for maintaining top-tier performance throughout my university career. It underscores my commitment to academic rigor and my proven ability to excel in a demanding educational environment.

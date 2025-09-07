@@ -1,6 +1,6 @@
 ## Overview
 
-During my two-year research experience, supported by a [**Research Grant**](TODO) alongside my [Master’s](TODO) studies, I specialized in Machine Learning and DevOps, particularly focusing on Federated Learning (FL) and its applications in dynamic, resource-constrained environments like 5G, 6G, and IoT. This period was marked by significant contributions to both research and academic mentorship.
+During my two-year research experience, supported by a [**Research Grant**](/recognition/researchgrant2023) alongside my [Master’s](/recognition/masters) studies, I specialized in Machine Learning and DevOps, particularly focusing on Federated Learning (FL) and its applications in dynamic, resource-constrained environments like 5G, 6G, and IoT. This period was marked by significant contributions to both research and academic mentorship.
 
 ## Key Contributions & Responsibilities:
 

@@ -12,6 +12,7 @@
     tech
     date
     switches
+    shuffle
     name="Contents"
     placeholder="Search for titles, descriptions, dates or even technologies..."
 />
