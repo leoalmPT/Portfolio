@@ -11,17 +11,26 @@
 
 <div class="lg:min-h-full lg:grid lg:grid-cols-8">
 
-    <div class="col-span-3 lg:min-h-full flex items-center justify-center p-10">
+    <div class="col-span-3 lg:min-h-full flex flex-col items-center justify-center p-10">
         <div 
-            class="aspect-3/4 border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full min-h-[400px] bg-muted"
+            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 
                 src={info.image} 
                 alt={info.name} 
-                class="object-fit h-full opacity-0 transition-opacity duration-700 ease-in-out"
+                class="object-cover opacity-0 transition-opacity duration-700 ease-in-out w-full"
                 onload={(e) => e.currentTarget.classList.remove('opacity-0')}
             />
+        </div>
+
+        <div 
+            class="flex flex-wrap mt-4 gap-x-2 gap-y-4 justify-center"
+            in:fly|global={{ y: 100, duration: 500, delay: 100 }}
+        >
+            {#each Object.entries(info.socials) as [name, href]}
+                <Logo name={name} href={href} new_window size={3}/>
+            {/each}
         </div>
     </div>
 
@@ -29,7 +38,7 @@
 
         <div 
             class="text-5xl font-bold" 
-            in:fly|global={{ y: 100, duration: 500, delay: 100 }}
+            in:fly|global={{ y: 100, duration: 500, delay: 200 }}
         >
             I'm  
             <span class="text-primary">
@@ -55,36 +64,20 @@
         
         <div 
             class="text-3xl font-bold mt-4"
-            in:fly|global={{ y: 100, duration: 500, delay: 200 }}
+            in:fly|global={{ y: 100, duration: 500, delay: 300 }}
         >
             {info.role}
         </div>
         <div 
             class="text-lg mt-4"
-            in:fly|global={{ y: 100, duration: 500, delay: 300 }}
+            in:fly|global={{ y: 100, duration: 500, delay: 400 }}
         >
             {info.summary}
         </div>
 
-        <div 
-            class="flex flex-wrap mt-4 gap-x-2 gap-y-4"
-            in:fly|global={{ y: 100, duration: 500, delay: 400 }}
-        >
-            {#each Object.entries(info.socials) as [name, href]}
-                <Logo name={name} href={href} new_window size={3}/>
-            {/each}
-            <Button 
-                variant="outline" 
-                class="lg:ml-4 text-lg h-full hover:scale-105 transition-transform duration-150 ease-in-out border-2 hover:!border-primary" 
-                href="/journey"
-            > 
-                Find out more!
-            </Button>
-        </div>
-
         <div
             in:fly|global={{ y: 100, duration: 500, delay: 500 }}
-            class="relative"
+            class="relative -mt-4"
         >
             <div class="absolute text-4xl font-bold text-primary mt-10 ml-12">
                 Tech Stack

@@ -39,7 +39,7 @@
 				value={selectedMonthItem.value.toString()}
 			>
 				<Select.Trigger 
-					class="!h-8 !bg-gradient-to-br from-card to-secondary cursor-pointer pr-1"
+					class="!h-8 !bg-gradient-to-br from-card to-secondary cursor-pointer pr-1 pl-2 hover:border-primary"
 				>
 					{selectedMonthItem.label}
 				</Select.Trigger>

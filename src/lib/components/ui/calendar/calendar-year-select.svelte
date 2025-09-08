@@ -24,38 +24,6 @@
 
 </script>
 
-<!-- <span
-	class={cn(
-		"has-focus:border-ring border-input shadow-xs has-focus:ring-ring/50 has-focus:ring-[3px] relative flex rounded-md border",
-		className
-	)}
->
-	<CalendarPrimitive.YearSelect bind:ref class="absolute inset-0 opacity-0" {...restProps}>
-		{#snippet child({ props, yearItems, selectedYearItem })}
-			<select {...props} {value}>
-				{#each yearItems as yearItem (yearItem.value)}
-					<option
-						value={yearItem.value}
-						selected={value !== undefined
-							? yearItem.value === value
-							: yearItem.value === selectedYearItem.value}
-					>
-						{yearItem.label}
-					</option>
-				{/each}
-			</select>
-			<span
-				class="[&>svg]:text-muted-foreground flex h-8 select-none items-center gap-1 rounded-md pl-2 pr-1 text-sm font-medium [&>svg]:size-3.5"
-				aria-hidden="true"
-			>
-				{yearItems.find((item) => item.value === value)?.label || selectedYearItem.label}
-				<ChevronDownIcon class="size-4" />
-			</span>
-		{/snippet}
-	</CalendarPrimitive.YearSelect>
-</span> -->
-
-
 <div
 	class={cn(
 		"relative",
@@ -71,7 +39,7 @@
 				value={selectedYearItem.value.toString()}
 			>
 				<Select.Trigger 
-					class="!h-8 !bg-gradient-to-br from-card to-secondary cursor-pointer pr-1"
+					class="!h-8 !bg-gradient-to-br from-card to-secondary cursor-pointer pr-1 pl-2 hover:border-primary"
 				>
 					{selectedYearItem.label}
 				</Select.Trigger>

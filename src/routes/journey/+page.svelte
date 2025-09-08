@@ -3,6 +3,7 @@
     import { Label } from "$lib/components/ui/label/index.js";
     import { fly, slide } from 'svelte/transition';
     import CircleQuestionMark from "$lib/assets/circleQuestionMark.svelte";
+    import * as Tooltip from "$lib/components/ui/tooltip/index.js";
 
     import Search, { filter } from "$lib/my-components/search.svelte";
     import Results from "$lib/my-components/results.svelte";
@@ -81,10 +82,23 @@
         </div>
     {/each}
 
-    <a href="/projects" class=" flex items-center hover:underline hover:text-primary">
-        <CircleQuestionMark /> 
-        <span class="text-lg ml-2">Projects</span>
-    </a>
+    <Tooltip.Provider delayDuration={0}>
+        <Tooltip.Root>
+            <Tooltip.Trigger>
+                <a href="/projects" class=" flex items-center hover:underline hover:text-primary">
+                    <CircleQuestionMark /> 
+                    <span class="text-lg ml-2">Projects</span>
+                </a>
+            </Tooltip.Trigger>
+            <Tooltip.Content 
+                side="bottom" 
+                class="bg-accent border border-primary text-foreground"
+                arrowClasses="bg-accent border border-primary"
+            >
+                Projects not listed here, click to see them!
+            </Tooltip.Content>
+        </Tooltip.Root>
+    </Tooltip.Provider>
 </div>
 
 <Results bind:results >

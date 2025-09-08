@@ -9,7 +9,7 @@ export const certifications: Certification[] = [
         id: "masters",
         title: "MSc in Computer Science and Engineering",
         date: "2025-07",
-        description: "Completed my Master's at the University of Aveiro with a final classification of 18.35/20, specializing in Software Engineering, Machine Learning, and Distributed Computing",
+        description: "Completed my Master's at the University of Aveiro with a final classification of 18.35/20, specializing in Software Engineering, Machine Learning, and Distributed Computing.",
         content: masters
     },
     {
@@ -23,7 +23,7 @@ export const certifications: Certification[] = [
         id: "aws-academy",
         title: "AWS Academy Graduate",
         date: "2023-11",
-        description: "Completed the AWS Academy Cloud Foundations program, demonstrating a foundational understanding of AWS cloud architecture, core services, security, and economics",
+        description: "Completed the AWS Academy Cloud Foundations program, demonstrating a foundational understanding of AWS cloud architecture, core services, security, and economics.",
         content: awsAcademy
     }
 ];
