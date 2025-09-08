@@ -15,6 +15,7 @@
 		locale,
 		placeholder = $bindable(),
 		monthIndex = 0,
+		yearIndex = 0,
 	}: {
 		captionLayout: ComponentProps<typeof Calendar>["captionLayout"];
 		months: ComponentProps<typeof CalendarMonthSelect>["months"];
@@ -25,6 +26,7 @@
 		placeholder: DateValue | undefined;
 		locale: string;
 		monthIndex: number;
+		yearIndex: number;
 	} = $props();
 
 	function formatYear(date: DateValue) {
@@ -55,7 +57,14 @@
 {/snippet}
 
 {#snippet YearSelect()}
-	<CalendarYearSelect {years} {yearFormat} value={month.year} />
+	<CalendarYearSelect {years} {yearFormat} value={month.year} 
+		onchange={(e) => {
+			if (!placeholder) return;
+			const v = Number.parseInt(e.currentTarget.value);
+			const newPlaceholder = placeholder.set({ year: v });
+			placeholder = newPlaceholder.subtract({ years: yearIndex });
+		}}
+	/>
 {/snippet}
 
 {#if captionLayout === "dropdown"}

@@ -12,7 +12,21 @@ const config = {
 			rehypePlugins: [],
 		})
 	],
-	kit: { adapter: adapter() },
+	kit: { 
+		adapter: adapter({
+			config: undefined,
+			platformProxy: {
+				configPath: undefined,
+				environment: undefined,
+				persist: undefined
+			},
+			fallback: 'spa',
+			routes: {
+				include: ['/*'],
+				exclude: ['<all>']
+			}
+		})
+	},
 	extensions: ['.svelte', '.svx', '.md']
 };
 

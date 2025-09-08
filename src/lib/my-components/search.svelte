@@ -75,7 +75,7 @@
     const allMenuOpts = {
         before: { label: "before:", description: "Filter by date before (YYYY-MM-DD)" },
         after: { label: "after:", description: "Filter by date after (YYYY-MM-DD)" },
-        tech: { label: "tech:", description: "Filter by technology (e.g., React, Svelte, Node.js)" }
+        tech: { label: "tech:", description: "Filter by technology (e.g., Python, Docker, AWS, etc.)" },
     };
 
     const menuOpts: Array<{ label: string; description: string }> = [];
@@ -253,6 +253,7 @@
             <Calendar 
                 type="single"
                 bind:value={calendarDate} 
+                captionLayout="dropdown"
                 buttonVariant="outline"
                 onValueChange={handleCalendar}
                 onmousedown={(e) => e.preventDefault()}

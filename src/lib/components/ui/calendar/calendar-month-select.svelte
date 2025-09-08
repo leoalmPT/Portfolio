@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Calendar as CalendarPrimitive } from "bits-ui";
 	import { cn, type WithoutChildrenOrChild } from "$lib/utils.js";
-	import ChevronDownIcon from "@lucide/svelte/icons/chevron-down";
+	import * as Select from "$lib/components/ui/select/index.js";
 
 	let {
 		ref = $bindable(null),
@@ -10,43 +10,53 @@
 		onchange,
 		...restProps
 	}: WithoutChildrenOrChild<CalendarPrimitive.MonthSelectProps> = $props();
+
+	const handleClick = (monthItem: { value: string | number; label: string }) => {
+		if (onchange) {
+			const event = {
+				currentTarget: {
+					value: monthItem.value.toString()
+				}
+			} as unknown as Event & { currentTarget: EventTarget & HTMLSelectElement };
+			onchange(event);
+		}
+	}
+
 </script>
 
-<span
+<div
 	class={cn(
-		"has-focus:border-ring border-input shadow-xs has-focus:ring-ring/50 has-focus:ring-[3px] relative flex rounded-md border",
-		className
+		"relative",
 	)}
 >
 	<CalendarPrimitive.MonthSelect 
 		bind:ref 
-		class="absolute inset-0 opacity-0" 
 		{...restProps}
 	>
 		{#snippet child({ props, monthItems, selectedMonthItem })}
-			<select 
-				{...props}
-				{value} 
-				{onchange}
+			<Select.Root 
+				type="single"
+				value={selectedMonthItem.value.toString()}
 			>
-				{#each monthItems as monthItem (monthItem.value)}
-					<option
-						value={monthItem.value}
-						selected={value !== undefined
-							? monthItem.value === value
-							: monthItem.value === selectedMonthItem.value}
-					>
-						{monthItem.label}
-					</option>
-				{/each}
-			</select>
-			<span
-				class="[&>svg]:text-muted-foreground flex h-8 select-none items-center gap-1 rounded-md pl-2 pr-1 text-sm font-medium [&>svg]:size-3.5"
-				aria-hidden="true"
-			>
-				{monthItems.find((item) => item.value === value)?.label || selectedMonthItem.label}
-				<ChevronDownIcon class="size-4" />
-			</span>
+				<Select.Trigger 
+					class="!h-8 !bg-gradient-to-br from-card to-secondary cursor-pointer pr-1"
+				>
+					{selectedMonthItem.label}
+				</Select.Trigger>
+				<Select.Content
+					class="!bg-gradient-to-br from-card to-secondary !min-w-fit"
+				>
+					{#each monthItems as monthItem (monthItem.value)}
+						<Select.Item 
+							value={monthItem.value.toString()}
+							onclick={() => handleClick(monthItem)}
+							class="cursor-pointer w-fit"
+						>
+							{monthItem.label}
+						</Select.Item>
+					{/each}
+				</Select.Content>
+			</Select.Root>
 		{/snippet}
 	</CalendarPrimitive.MonthSelect>
-</span>
+</div>

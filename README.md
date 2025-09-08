@@ -12,3 +12,41 @@ Run:
 ```
 pnpm run dev --open
 ``` 
+
+Projects:
+- rng manipulation
+- pxm-tools
+- background clicker
+- musicbot
+
+Projects uni:
+- flexfl + dissertation + PDE portfolio
+- mepml
+- portfolio
+- hackathon
+- TAI p2 - aidetx 
+- ES - noteally
+- GIC- wesago
+- TQS - pickapoint
+- TPJ - 2d game
+- TPW - ezployee
+- IHC - campAndGo
+- IES - logipack
+
+Extras:
+- IA - rushour
+- TAI p1 - copymodel
+- TAI p3 - shazam
+- TAA p1 - airline passenger
+- TAA p2 - image classification
+- FAA p1 - FL
+- FAA p2 - lung cancer
+- SIO - vulnerable and secure ehealth website
+- SIO - secure bingo
+- CD - p2p image repo
+- CLE 3 em 1
+- RI p1
+- TMBD?
+- MDLE?
+- SO?
+- C - mus?
