@@ -26,7 +26,7 @@
 
 
 <a 
-    class="mycard w-full max-w-xl fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden block hover:border-primary"
+    class="w-full max-w-xl fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden block hover:border-primary"
     href={href}
 >
     <div 
@@ -88,3 +88,18 @@
         {/if}
     </div>
 </a>
+
+<style>
+    @keyframes fly-scroll {
+        0%   { transform: translateY(100px); opacity: 0; }
+        20%  { transform: translateY(0); opacity: 1; }
+        80%  { transform: translateY(0); opacity: 1; }
+        100% { transform: translateY(-100px); opacity: 0; }
+    }
+
+    .fly-scroll {
+        animation: fly-scroll 1s linear both;
+        animation-timeline: view();
+        animation-range: entry 0% exit 100%;
+    }
+</style>
