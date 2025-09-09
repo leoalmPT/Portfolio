@@ -14,8 +14,6 @@ The work investigates the performance and costs of FL in the context of 6G netwo
 
 The study compares traditional learning with four FL algorithms using datasets for network slice attribution and intrusion detection systems (IDS). The results indicate that while FL can offer significant acceleration, especially for the IDS dataset (achieving an average 66.08% acceleration with Decentralized Synchronous) and the slicing dataset (with an average 82.87% acceleration for Decentralized Asynchronous), the choice of FL approach and network conditions are crucial for optimal performance.
 
-## Selected Figures
-
 ### Epoch time division by instructions using a logarithmic scale in the Slicing5G dataset.
 
 <img src="/files/papers/bigdata2025/plot.png" alt="Plot" width="600" />

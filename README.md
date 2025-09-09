@@ -20,7 +20,7 @@ Projects:
 - musicbot
 
 Projects uni:
-- flexfl + dissertation + PDE portfolio
+- flexfl + dissertation
 - mepml
 - portfolio
 - hackathon
@@ -34,6 +34,7 @@ Projects uni:
 - IES - logipack
 
 Extras:
+- PDE portfolio
 - IA - rushour
 - TAI p1 - copymodel
 - TAI p3 - shazam

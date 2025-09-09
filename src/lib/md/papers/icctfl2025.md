@@ -23,8 +23,6 @@ Our work proposes a novel framework that directly tackles these issues. Key aspe
 -   **Robust Convergence:** The framework successfully maintained model training and achieved convergence even when simulating **probabilistic worker failures**. For instance, with a 1% failure rate, the model converged with high accuracy (MCC of 0.9472, accuracy of 0.9958, and F1 score of 0.9958), similar to failure-free runs.
 -   **Adaptability for Real-world Deployment:** The results underscore the framework's robustness to node failures and dynamic participation, crucial for real-world heterogeneous 6G and IoT environments.
 
-## Selected Figures
-
 ### Comparison of times for different communication protocols (MPI vs. Zenoh).
 
 <img src="/files/papers/icctfl2025/times.png" alt="Communication Protocol Times" width="600" />

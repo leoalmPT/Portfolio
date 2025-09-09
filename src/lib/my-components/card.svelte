@@ -26,7 +26,7 @@
 
 
 <a 
-    class="w-full max-w-xl fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden block hover:border-primary"
+    class="w-full max-w-xl min-h-60 fly-scroll bg-gradient-to-br from-card to-secondary relative rounded-xl border-2 p-6 transition-transform duration-150 ease-in-out hover:scale-102 overflow-hidden block hover:border-primary"
     href={href}
 >
     <div 
@@ -70,11 +70,11 @@
             class="my-3 border"
         ></div>
 
-        <div class="line-clamp-6 min-h-24">
+        <div class="line-clamp-6">
             {@html item.description}
         </div>
 
-        {#if item.skills}
+        {#if item.skills && item.skills.length > 0}
             <div class="mt-auto">
                 <div 
                     class="mt-2 mb-3 border" 

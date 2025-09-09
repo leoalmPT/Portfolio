@@ -16,8 +16,6 @@ Traditional FL systems often break down when devices disconnect, networks fluctu
 
 The results showed that the system can maintain convergence with high accuracy (MCC = 0.9453) even under simulated device failures, with **Zenoh emerging as the most efficient communication protocol**.
 
-## Selected Figures
-
 ### Timeline of workers during training with Zenoh protocol at 5% failure rate.
 
 <img src="/files/papers/sensors2025/timeline.png" alt="Timeline" width="1000" />

@@ -24,8 +24,6 @@ The experimental setup involved preprocessing datasets by removing irrelevant fe
 -   **Faster Convergence:** FL training demonstrated **faster convergence times**, reducing the time to train models by up to **89.3%** compared to single training.
 -   **Scalability:** Configurations with 4 or 8 workers generally achieved better results and lower training times than those with 2 workers, highlighting the scalability benefits of FL in distributed environments.
 
-## Selected Figures
-
 ### Experiments MCC (Matthew's Correlation Coefficient) for single and Federated Learning training.
 
 <img src="/files/papers/melecon2024/mcc.png" alt="Experiments MCC Results" width="600" />

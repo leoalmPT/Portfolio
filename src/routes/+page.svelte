@@ -77,9 +77,9 @@
 
         <div
             in:fly|global={{ y: 100, duration: 500, delay: 500 }}
-            class="relative -mt-4"
+            class="relative mt-6"
         >
-            <div class="absolute text-4xl font-bold text-primary mt-10 ml-12">
+            <div class="absolute text-4xl font-bold text-primary ml-12">
                 Tech Stack
             </div>
             <Carousel.Root 
@@ -97,7 +97,7 @@
                 <Carousel.Content>
                     {#each Object.entries(info.skills) as [name, technologies]}
                         <Carousel.Item>
-                            <div class="text-3xl font-bold mb-4 mt-[100px]">{name}</div>
+                            <div class="text-3xl font-bold mb-4 mt-12">{name}</div>
                             <div 
                                 class="flex flex-wrap gap-2"
                             >
@@ -108,8 +108,8 @@
                         </Carousel.Item>
                     {/each}
                 </Carousel.Content>
-                <Carousel.Previous class="top-[63px] left-0 hover:!border-primary hover:cursor-pointer"/>
-                <Carousel.Next class="top-[63px] left-0 hover:!border-primary translate-x-[280px] hover:cursor-pointer" />
+                <Carousel.Previous class="top-6 left-0 hover:!border-primary hover:cursor-pointer"/>
+                <Carousel.Next class="top-6 left-0 hover:!border-primary translate-x-[280px] hover:cursor-pointer" />
             </Carousel.Root>
         </div>
 

@@ -22,8 +22,6 @@ The study applied the three XAI techniques to thirteen different ML models (Clas
 -   Despite models achieving high accuracy, **significant disagreement can exist between XAI methods** regarding feature relevance, highlighting that relying on a single XAI technique can lead to biased or incomplete explanations.
 -   The explainability process can consume **substantially more energy than the ML model's inference**, with LIME generally exhibiting the highest temporal and energy overhead. This underscores the need for judicious application of XAI, balancing the need for explanation against its computational burden.
 
-## Selected Figures
-
 ### Correlation between XAI results regarding datasets for high-performance models.
 
 <img src="/files/papers/globecom2024/correlation.png" alt="XAI Correlation High Performance" width="600" />

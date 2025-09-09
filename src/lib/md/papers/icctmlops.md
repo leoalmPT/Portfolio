@@ -24,8 +24,6 @@ Our work proposes a novel **task placement system for ML pipelines** that automa
 -   **Reduced Execution Time:** Achieved reductions of **68.61%**, **59.36%**, and **50.72%** in total execution time compared to random, FCFS-random, and FCFS-RR strategies, respectively.
 -   **Reduced Waiting Time:** Demonstrated even greater improvements in average waiting time, with reductions of **89.16%**, **65.59%**, and **80.72%** compared to the baselines.
 
-## Selected Figures
-
 ### Solution Architecture of the proposed task placement system.
 
 <img src="/files/papers/icctmlops2025/architecture.png" alt="Solution Architecture" width="800" />

@@ -51,7 +51,7 @@ export const papers: Paper[] = [
         title: "Shallow vs. Deep Learning: Prioritizing Efficiency in Next Generation Networks",
         date: "2024-08-19",
         publisher: "FiCloud 2024",
-        description: "Comparison of shallow and deep learning models. Results show that shallow models achieve comparable performance with over 90% faster training and prediction times",
+        description: "Comparison of shallow and deep learning models. Results show that shallow models achieve comparable performance with over 90% faster training and prediction times.",
         authors: ["Rafael Teixeira", "Leonardo Almeida", "Pedro Rodrigues", "Mário Antunes", "Diogo Gomes", "Rui L. Aguiar"],
         content: ficloud2024
     },
