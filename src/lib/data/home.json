@@ -31,7 +31,8 @@
             "Proxmox",
             "Terraform",
             "AWS",
-            "Cloudflare"
+            "Cloudflare",
+            "GoogleCloud"
         ],
         "Machine Learning": [
             "TensorFlow",
