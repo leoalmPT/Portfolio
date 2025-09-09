@@ -34,7 +34,7 @@
 {#if item}
 
     <div 
-        class="absolute top-0 right-0 w-1/2 h-30 opacity-50 z-0 rounded-t-[30px]"
+        class="absolute top-0 right-0 w-1/2 h-30 opacity-50 z-0 sm:rounded-t-[30px]"
         style={`background: radial-gradient(ellipse 100% 100% at top right, ${color} 0%, transparent 100%);`}
     ></div>
 
@@ -44,7 +44,9 @@
             class="flex flex-col gap-y-3 justify-center items-center"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
-            <div class="text-5xl font-bold text-center leading-snug">{item.title}</div>
+            <div 
+                class="text-3xl sm:text-5xl font-bold text-center leading-snug"
+            >{item.title}</div>
             <div class="flex flex-wrap gap-x-4 gap-y-2">
                 {#if item.company}
                     <div class="flex gap-2">

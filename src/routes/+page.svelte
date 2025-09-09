@@ -9,11 +9,11 @@
     import info from "$lib/data/home.json";
 </script>
 
-<div class="lg:min-h-full lg:grid lg:grid-cols-8">
+<div class="xl:min-h-full xl:grid xl:grid-cols-8">
 
-    <div class="col-span-3 lg:min-h-full flex flex-col items-center justify-center p-10">
+    <div class="col-span-3 xl:min-h-full flex flex-col items-center justify-center p-10">
         <div 
-            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden w-[400px] lg:w-full"
+            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden max-w-[300px] sm:max-w-[400px]"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 
@@ -34,10 +34,10 @@
         </div>
     </div>
 
-    <div class="col-span-5 lg:min-h-full flex flex-col justify-center p-2">
+    <div class="col-span-5 xl:min-h-full flex flex-col justify-center p-2">
 
         <div 
-            class="text-5xl font-bold" 
+            class="text-3xl sm:text-5xl font-bold" 
             in:fly|global={{ y: 100, duration: 500, delay: 200 }}
         >
             I'm  

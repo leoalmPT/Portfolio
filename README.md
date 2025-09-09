@@ -14,15 +14,15 @@ pnpm run dev --open
 ``` 
 
 Projects:
+- portfolio
 - rng manipulation
 - pxm-tools
 - background clicker
 - musicbot
 
 Projects uni:
-- flexfl + dissertation
-- mepml
-- portfolio
+<!-- - flexfl + dissertation
+- mepml -->
 - hackathon
 - TAI p2 - aidetx 
 - ES - noteally

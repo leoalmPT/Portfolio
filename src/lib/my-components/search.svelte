@@ -1,5 +1,6 @@
 <script module lang="ts">
     import Fuse from 'fuse.js'
+    import { Skills } from '$lib/data/types';
 
     export const filter = (q: string, data: Array<any>, sortByMatch: boolean) => {
         const regex = new RegExp("\\b(?:before:|after:|tech:)[\\w\\-/]*", "g");
@@ -18,11 +19,10 @@
             });
         }
         if (tech) {
-            const data_ = data.filter(item => {
-                return item.skills?.map((t: string) => t.toLowerCase()).includes(tech.toLowerCase());
-            });
-            if (data_.length !== 0) {
-                data = data_;
+            if (Skills.map(t => t.toLowerCase()).includes(tech.toLowerCase())) {
+                data = data.filter(item => {
+                    return item.skills?.map((t: string) => t.toLowerCase()).includes(tech.toLowerCase());
+                });
             } else {
                 data = data.filter(item => {
                     return item.skills?.some((t: string) => t.toLowerCase().includes(tech.toLowerCase()));
@@ -51,7 +51,6 @@
 
     import Input, { clearInput, setCaretNext, getCurrentHighlight } from "$lib/my-components/Input.svelte";
     import { getSrc, getDescription } from "$lib/my-components/logo.svelte";
-    import { Skills } from "$lib/data/types";
 
     let { 
         placeholder = "Search...",

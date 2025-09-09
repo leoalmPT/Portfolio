@@ -4,7 +4,7 @@ type SVXComponentType = typeof import("*.svx")["default"];
 
 export const Skills = [
     // Programming Languages
-    "Python", "C", "Cpp", "Java", "JavaScript", "TypeScript", "Lua",
+    "Python", "Cpp", "Java", "JavaScript", "TypeScript", "Lua",
     // CI/CD & Cloud
     "Git", "GithubActions", "Docker", "UV", "Maven", "Kubernetes", "Proxmox", "Terraform", "AWS", "Cloudflare", "GoogleCloud",
     // Machine Learning

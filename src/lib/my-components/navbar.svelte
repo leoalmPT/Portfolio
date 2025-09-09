@@ -86,7 +86,7 @@
                 <NavigationMenu.Link>
                     {#snippet child()}
                         <a href="/journey" class={`${navigationMenuTriggerStyle()} !text-base bg-transparent`}>
-                            <Route /> <span class="ml-2">Journey</span>
+                            <Route /> <span class="ml-2 hidden sm:inline">Journey</span>
                         </a>
                     {/snippet}
                 </NavigationMenu.Link>
@@ -94,11 +94,11 @@
 
             <NavigationMenu.Item class="relative">
                 <NavigationMenu.Trigger class="bg-transparent text-base">
-                    <BadgeCheck /> <span class="ml-2">Track Record</span>
+                    <BadgeCheck /> <span class="ml-2 hidden sm:inline">Track Record</span>
                 </NavigationMenu.Trigger>
-                <NavigationMenu.Content class="absolute w-auto left-auto right-0 md:left-[-60px] md:right-auto lg:left-[-240px] !bg-gradient-to-br from-card to-secondary">
+                <NavigationMenu.Content class="fixed left-1/2 -translate-x-1/2 sm:absolute sm:translate-0 sm:left-[-60px] md:right-auto lg:left-[-240px] !bg-gradient-to-br from-card to-secondary w-auto">
                     <ul
-                        class="grid gap-2 p-2 w-[250px] lg:w-[600px] lg:grid-cols-2"
+                        class="grid gap-2 p-2 w-[300px] lg:w-[600px] lg:grid-cols-2"
                     >
                         {#each record as { title, href, description }}
                             <NavigationMenu.Link href={href}>
