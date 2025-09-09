@@ -6,7 +6,7 @@ FlexFL is an open-source Resilient Federated Learning (FL) Framework, developed 
 
 ### Demonstration Video
 
-<iframe width="800" class="aspect-video rounded-lg border-2" src="https://www.youtube.com/embed/XG3y8HlvgHY?si=jz38YtH6w3GatXtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="aspect-video rounded-lg border-2 max-w-[800px]" src="https://www.youtube.com/embed/XG3y8HlvgHY?si=jz38YtH6w3GatXtQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## About the Project
 

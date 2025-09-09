@@ -106,7 +106,7 @@
         <div class={`flex ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
             {#key item.title + index}
                 <div 
-                    class={`flex-1 flex justify-center py-4 lg:p-10 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}
+                    class={`flex-1 flex justify-center w-full py-2 lg:p-10 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}
                     in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 500 : 100 * counter }}
                     onintrostart={() => counter += 1}
                 >
