@@ -2,7 +2,6 @@
     import Particles, { particlesInit } from '@tsparticles/svelte';
     import { loadSlim } from '@tsparticles/slim';
     import { mode } from "mode-watcher";
-    import { fade } from 'svelte/transition';
 
     let theme = $derived(mode.current ?? 'light');
     const colors = {
@@ -38,14 +37,18 @@
         }
     });
 
-    void particlesInit(async (engine) => {
-        await loadSlim(engine);
-    });
+    const initialWidth =  typeof window !== 'undefined' ? window.innerWidth : 0;
+    if (initialWidth >= 640) {
+        void particlesInit(async (engine) => {
+            await loadSlim(engine);
+        });
+    }
 </script>
 
-<Particles
-    id="tsparticles"
-    options={particlesConfig}
-    class="hidden sm:block"
-/>
+{#if initialWidth >= 640}
+    <Particles
+        id="tsparticles"
+        options={particlesConfig}
+    />
+{/if}
 <div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] via-60% from-slate-50 via-cyan-50 to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950"></div>

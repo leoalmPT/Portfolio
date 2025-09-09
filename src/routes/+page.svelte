@@ -11,9 +11,9 @@
 
 <div class="xl:min-h-full xl:grid xl:grid-cols-8">
 
-    <div class="col-span-3 xl:min-h-full flex flex-col items-center justify-center p-10">
+    <div class="col-span-3 xl:min-h-full flex flex-col items-center justify-center ">
         <div 
-            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden max-w-[300px] sm:max-w-[400px]"
+            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden max-w-[300px] xl:max-w-[400px] mx-10"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 
@@ -25,7 +25,7 @@
         </div>
 
         <div 
-            class="flex flex-wrap mt-4 gap-x-2 gap-y-4 justify-center"
+            class="flex flex-wrap my-4 gap-x-2 gap-y-4 justify-center"
             in:fly|global={{ y: 100, duration: 500, delay: 100 }}
         >
             {#each Object.entries(info.socials) as [name, href]}
