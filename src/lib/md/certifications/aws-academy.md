@@ -1,6 +1,6 @@
 ## Overview
 
-[AWS Academy Cloud Foundations](https://aws.amazon.com/training/awsacademy/) - [Certificate](https://www.credly.com/badges/d9109a3c-81b4-43ac-9515-46d29697442b/public_url) - [Project](TODO)
+[AWS Academy Cloud Foundations](https://aws.amazon.com/training/awsacademy/) - [Certificate](https://www.credly.com/badges/d9109a3c-81b4-43ac-9515-46d29697442b/public_url) - [Project](/projects/noteally)
 
 The AWS Academy Cloud Foundations program provided me with a comprehensive understanding of cloud computing concepts, core Amazon Web Services (AWS), security best practices, and the economic benefits of cloud adoption. This foundational certification is designed to prepare individuals for entry-level cloud positions and further AWS certifications.
 

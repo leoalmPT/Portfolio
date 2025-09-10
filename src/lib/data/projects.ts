@@ -4,6 +4,7 @@ import flexfl from "$lib/md/projects/flexfl.md";
 import mepml from "$lib/md/projects/mepml.md";
 import aitv from "$lib/md/projects/aitv.md";
 import aidtex from "$lib/md/projects/aidetx.md";
+import noteally from "$lib/md/projects/noteally.md";
 
 export const projects: Project[] = [
     {
@@ -17,7 +18,7 @@ export const projects: Project[] = [
         id: "mepml",
         title: "MepML - ML/AI Model Evaluation Platform",
         description: "Bachelor's final project, a web-based platform designed for ML model evaluation, enabling university professors to create and manage ML exercises and students to submit models, receive immediate performance feedback, and compare results.",
-        skills: ["GoogleCloud", "Docker", "GithubActions", "Python", "Django", "FastAPI", "MySQL", "React", "JavaScript", "Scikit-learn", "Pandas", "NumPy", "Git", "HTML", "CSS"],
+        skills: ["GoogleCloud", "Docker", "GithubActions", "Python", "React", "JavaScript", "Django", "FastAPI", "MySQL", "Scikit-learn", "Pandas", "NumPy", "Git", "HTML", "CSS"],
         content: mepml
     },
     {
@@ -33,6 +34,13 @@ export const projects: Project[] = [
         description: "AIDetx offers a computationally efficient and interpretable alternative to deep learning classifiers. Achieving up to 3.1 million characters per second using only a single CPU core.",
         skills: ["Cpp", "Python", "Pandas", "NumPy", "Scikit-learn", "Git"],
         content: aidtex
+    },
+    {
+        id: "noteally",
+        title: "NoteAlly - Students and Educators note sharing platform",
+        description: "Microservices-based web platform designed to facilitate the exchange of academic resources like study materials, coding projects, and tutoring services.",
+        skills: ["AWS", "Terraform", "Docker", "GithubActions", "Python", "Django", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
+        content: noteally
     }
 ];
 

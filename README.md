@@ -25,7 +25,7 @@ Projects uni:
 <!-- - mepml -->
 <!-- - hackathon -->
 <!-- - TAI p2 - aidetx  -->
-- ES - noteally
+<!-- - ES - noteally -->
 - GIC- wesago
 - TQS - pickapoint
 - TPJ - 2d game

@@ -2,7 +2,7 @@
 
 [Repository](https://github.com/leoalmPT/FlexFL) - [PyPI](https://pypi.org/project/flexfl/) - [Dissertation](https://github.com/leoalmPT/Dissertation) - [Demo Video](https://youtu.be/XG3y8HlvgHY)
 
-FlexFL is an open-source Resilient Federated Learning (FL) Framework, developed as the core of my [**Master's**](/recognition/masters) [**Dissertation**](https://github.com/leoalmPT/Dissertation) project, including [**published papers**](/experience/researcher). It is specifically designed to address the significant challenges of deploying distributed machine learning in dynamic and resource-constrained edge environments, such as IoT and 5G/6G networks. The framework champions a highly modular architecture and robust resilience mechanisms to ensure continuous training and model convergence, even amidst node failures and fluctuating network conditions.
+FlexFL is an open-source Resilient Federated Learning (FL) Framework, developed as the core of my [**Master's**](/recognition/masters) [**Dissertation**](https://github.com/leoalmPT/Dissertation) project, resulting in several [**published papers**](/experience/researcher). It is specifically designed to address the significant challenges of deploying distributed machine learning in dynamic and resource-constrained edge environments, such as IoT and 5G/6G networks. The framework champions a highly modular architecture and robust resilience mechanisms to ensure continuous training and model convergence, even amidst node failures and fluctuating network conditions.
 
 ### Demonstration Video
 
