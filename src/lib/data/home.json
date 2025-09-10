@@ -39,8 +39,7 @@
             "PyTorch",
             "Scikit-learn",
             "Pandas",
-            "NumPy",
-            "OpenCV"
+            "NumPy"
         ],
         "Full Stack": [
             "HTML",
@@ -50,8 +49,7 @@
             "Angular",
             "Django",
             "SpringBoot",
-            "FastAPI",
-            "Flask"
+            "FastAPI"
         ],
         "Data & Messaging": [
             "PostgreSQL",

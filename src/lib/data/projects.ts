@@ -5,6 +5,7 @@ import mepml from "$lib/md/projects/mepml.md";
 import aitv from "$lib/md/projects/aitv.md";
 import aidtex from "$lib/md/projects/aidetx.md";
 import noteally from "$lib/md/projects/noteally.md";
+import wesago from "$lib/md/projects/wesago.md";
 
 export const projects: Project[] = [
     {
@@ -18,7 +19,7 @@ export const projects: Project[] = [
         id: "mepml",
         title: "MepML - ML/AI Model Evaluation Platform",
         description: "Bachelor's final project, a web-based platform designed for ML model evaluation, enabling university professors to create and manage ML exercises and students to submit models, receive immediate performance feedback, and compare results.",
-        skills: ["GoogleCloud", "Docker", "GithubActions", "Python", "React", "JavaScript", "Django", "FastAPI", "MySQL", "Scikit-learn", "Pandas", "NumPy", "Git", "HTML", "CSS"],
+        skills: ["GoogleCloud", "Cloudflare", "Docker", "GithubActions", "Python", "React", "JavaScript", "Django", "FastAPI", "MySQL", "Scikit-learn", "Pandas", "NumPy", "Git", "HTML", "CSS"],
         content: mepml
     },
     {
@@ -41,6 +42,13 @@ export const projects: Project[] = [
         description: "Microservices-based web platform designed to facilitate the exchange of academic resources like study materials, coding projects, and tutoring services.",
         skills: ["AWS", "Terraform", "Docker", "GithubActions", "Python", "Django", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
         content: noteally
+    },
+    {
+        id: "wesago",
+        title: "Wesago - Modern online forum for students and teachers",
+        description: "Robust Kubernetes deployment of the Misago forum application and a static website. It features PostgreSQL and Redis replication, liveness health checks, CPU-based autoscaling, centralized logging, monitoring, and a disaster recovery plan.",
+        skills: ["Kubernetes", "Docker", "Python", "Django", "React", "JavaScript", "PostgreSQL", "Redis", "Git", "HTML", "CSS"],
+        content: wesago
     }
 ];
 

@@ -26,7 +26,7 @@ Projects uni:
 <!-- - hackathon -->
 <!-- - TAI p2 - aidetx  -->
 <!-- - ES - noteally -->
-- GIC- wesago
+<!-- - GIC - wesago -->
 - TQS - pickapoint
 - TPJ - 2d game
 - TPW - ezployee
