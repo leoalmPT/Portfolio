@@ -27,11 +27,11 @@ Projects uni:
 <!-- - TAI p2 - aidetx  -->
 <!-- - ES - noteally -->
 <!-- - GIC - wesago -->
-- TQS - pickapoint
-- TPJ - 2d game
-- TPW - ezployee
+<!-- - TQS - pickapoint -->
+<!-- - TPW - ezployee -->
 - IHC - campAndGo
 - IES - logipack
+- TPJ - 2d game
 
 Extras:
 - PDE portfolio

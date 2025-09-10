@@ -7,6 +7,8 @@ import aidtex from "$lib/md/projects/aidetx.md";
 import noteally from "$lib/md/projects/noteally.md";
 import wesago from "$lib/md/projects/wesago.md";
 import pickapoint from "$lib/md/projects/pickapoint.md";
+import ezployee from "$lib/md/projects/ezployee.md";
+import campandgo from "$lib/md/projects/campandgo.md";
 
 export const projects: Project[] = [
     {
@@ -57,6 +59,20 @@ export const projects: Project[] = [
         description: "It enables businesses to register as collection points, e-stores to manage orders and track status, and customers to receive SMS notifications and collect packages securely.",
         skills: ["GoogleCloud", "Docker", "GithubActions", "Java", "SpringBoot", "Maven", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
         content: pickapoint
+    },
+    {
+        id: "ezployee",
+        title: "Ezployee - Find your next job",
+        description: "Web platform connecting companies with potential employees, allowing companies to post job offers and users to search, filter, comment, and save offers and companies.",
+        skills: ["GithubActions", "Angular", "TypeScript", "JavaScript", "Python", "Django", "Git", "HTML", "CSS"],
+        content: ezployee
+    },
+    {
+        id: "campandgo",
+        title: "CampAndGo - Camping site booking platform",
+        description: "Web platform simulating a campsite booking experience, developed to learn about user personas and usability testing. It enables users to search for campsites, filter by various criteria.",
+        skills: ["GithubActions", "React", "JavaScript", "Git", "HTML", "CSS"],
+        content: campandgo
     }
 ];
 
