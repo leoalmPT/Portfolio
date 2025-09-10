@@ -2,7 +2,7 @@
 
 [Repository](https://github.com/leoalmPT/FlexFL/tree/MDPI) - [Paper](/files/papers/sensors2025/paper.pdf) - [DOI](https://doi.org/10.3390/s25123812)
 
-This paper was published as part of the *Edge Computing in IoT Networks Based on Artificial Intelligence* special issue. It extends the work from my dissertation, [**FlexFL**](TODO), by iterating on the framework to improve **modularity** and **resilience** for real-world edge deployments.  
+This paper was published as part of the *Edge Computing in IoT Networks Based on Artificial Intelligence* special issue. It extends the work from my dissertation, [**FlexFL**](/projects/flexfl), by iterating on the framework to improve **modularity** and **resilience** for real-world edge deployments.  
 
 ## About the Paper
 

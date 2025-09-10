@@ -1,6 +1,6 @@
 ## Overview
 
-[Project page](https://mep-org.github.io/website-for-communication/) - [Repositories](https://github.com/orgs/MEP-org/repositories) - [Demo Video](https://youtu.be/vz1BaUeZsS8?si=QLGkIk4V0qoEDXSE) [Website](https://mepml.pages.dev/) - [Prototype](https://mep-org.github.io/Prototype/)
+[Project page](https://mep-org.github.io/website-for-communication/) - [Repositories](https://github.com/orgs/MEP-org/repositories) - [Demo Video](https://youtu.be/vz1BaUeZsS8?si=QLGkIk4V0qoEDXSE) - [Website](https://mepml.pages.dev/) - [Prototype](https://mep-org.github.io/Prototype/)
 
 MepML (ML/AI model evaluation platform) is a web application developed as a final project for the [**Bachelor's degree**](/recognition/bachelors). It aims to streamline the process of teaching and learning Machine Learning by providing a collaborative and intuitive platform for professors to assign and evaluate ML exercises, and for students to submit their models and receive immediate performance feedback.
 

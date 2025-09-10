@@ -5,7 +5,7 @@
 
 [Repository](https://github.com/leoalmPT/FlexFL/tree/ICCT) - [Paper](/files/papers/icctfl2025/paper.pdf)
 
-This paper introduces a Resilient Federated Learning Framework, [**FlexFL**](TODO), specifically designed to address the challenges of deploying Federated Learning (FL) in the dynamic, resource-constrained environments of 6G and Internet of Things (IoT) networks.
+This paper introduces a Resilient Federated Learning Framework, [**FlexFL**](/projects/flexfl), specifically designed to address the challenges of deploying Federated Learning (FL) in the dynamic, resource-constrained environments of 6G and Internet of Things (IoT) networks.
 
 ## About the Paper
 

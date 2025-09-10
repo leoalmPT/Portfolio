@@ -21,10 +21,10 @@ Projects:
 - musicbot
 
 Projects uni:
-<!-- - flexfl + dissertation
-- mepml -->
-- hackathon
-- TAI p2 - aidetx 
+<!-- - flexfl + dissertation -->
+<!-- - mepml -->
+<!-- - hackathon -->
+<!-- - TAI p2 - aidetx  -->
 - ES - noteally
 - GIC- wesago
 - TQS - pickapoint

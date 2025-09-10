@@ -1,6 +1,6 @@
 ## Overview
 
-[University of Aveiro](https://www.ua.pt/) - [Certificate](TODO) - [Dissertation](TODO)
+[University of Aveiro](https://www.ua.pt/) - [Certificate](TODO) - [Dissertation](/projects/flexfl)
 
 My Master's degree in Computer Science and Engineering at University of Aveiro allowed me to tailor my studies to cutting-edge areas, building upon my foundational knowledge from my Bachelor's. I focused on developing expertise in critical domains relevant to modern computing challenges, and completed my degree with a final classification of 18.35/20.
 

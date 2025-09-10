@@ -1,6 +1,6 @@
 ## Overview
 
-[University of Aveiro](https://www.ua.pt/) - [Certificate](TODO) - [Final Project](TODO)
+[University of Aveiro](https://www.ua.pt/) - [Certificate](TODO) - [Final Project](/projects/mepml)
 
 My Bachelor's degree at University of Aveiro provided a comprehensive and robust foundation in core computer science principles and modern software development practices. The curriculum focused on developing strong problem-solving skills and an understanding of the entire software development lifecycle. I graduated with a final classification of 17/20.
 
