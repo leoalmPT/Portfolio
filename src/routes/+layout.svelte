@@ -33,7 +33,7 @@
 	<meta name="author" content="Leonardo Almeida" />
 </svelte:head>
 
-<ModeWatcher defaultMode="dark" />
+<ModeWatcher defaultMode={"dark"} />
 <Background />
 
 <div class="flex flex-col h-[100vh]">

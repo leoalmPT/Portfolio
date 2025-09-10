@@ -6,6 +6,7 @@ import aitv from "$lib/md/projects/aitv.md";
 import aidtex from "$lib/md/projects/aidetx.md";
 import noteally from "$lib/md/projects/noteally.md";
 import wesago from "$lib/md/projects/wesago.md";
+import pickapoint from "$lib/md/projects/pickapoint.md";
 
 export const projects: Project[] = [
     {
@@ -45,10 +46,17 @@ export const projects: Project[] = [
     },
     {
         id: "wesago",
-        title: "Wesago - Modern online forum for students and teachers",
-        description: "Robust Kubernetes deployment of the Misago forum application and a static website. It features PostgreSQL and Redis replication, liveness health checks, CPU-based autoscaling, centralized logging, monitoring, and a disaster recovery plan.",
+        title: "Wesago - Modern online forum",
+        description: "Robust Kubernetes deployment of the Misago forum, with a static website. It features PostgreSQL and Redis replication, liveness health checks, CPU-based autoscaling, centralized logging, monitoring, and a disaster recovery plan.",
         skills: ["Kubernetes", "Docker", "Python", "Django", "React", "JavaScript", "PostgreSQL", "Redis", "Git", "HTML", "CSS"],
         content: wesago
+    },
+    {
+        id: "pickapoint",
+        title: "PickAPoint & PrintPlate - E-commerce deliveries and e-store platforms",
+        description: "It enables businesses to register as collection points, e-stores to manage orders and track status, and customers to receive SMS notifications and collect packages securely.",
+        skills: ["GoogleCloud", "Docker", "GithubActions", "Java", "SpringBoot", "Maven", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
+        content: pickapoint
     }
 ];
 
