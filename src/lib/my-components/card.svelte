@@ -5,7 +5,7 @@
 
     import { type Item } from "$lib/data/types";
     import { getDate } from "$lib/my-components//item.svelte";
-    import itemColors from "$lib/data/itemColors.json";
+    import { itemColors } from "$lib/data/misc";
     import Logo from "$lib/my-components/logo.svelte";
 
     let {

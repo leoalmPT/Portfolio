@@ -1,7 +1,7 @@
 <script module lang="ts">
     import { mode } from "mode-watcher";
 
-    import iconData from "$lib/data/iconData.json";
+    import { iconData } from "$lib/data/misc";
 
     const theme = $derived(mode.current ?? 'dark');
 

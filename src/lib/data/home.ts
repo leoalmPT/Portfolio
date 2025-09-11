@@ -1,0 +1,80 @@
+export const home = {
+    name: "Leonardo Almeida",
+    role: "Software Engineer",
+    image: "/profile.png",
+    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    socials: {
+        email: "mailto:leonardoalmeida7777@gmail.com",
+        LinkedIn: "https://www.linkedin.com/in/leoalmpt",
+        GitHub: "https://github.com/leoalmpt",
+        ORCID: "https://orcid.org/0009-0006-5669-2378",
+        ResearchGate: "https://www.researchgate.net/profile/Leonardo-Almeida-12",
+        cv: "/CV.pdf"
+    },
+    skills: {
+        "Programming Languages": [
+            "Python",
+            "Cpp",
+            "Java",
+            "JavaScript",
+            "TypeScript",
+            "Lua"
+        ],
+        "CI/CD & Cloud": [
+            "Git",
+            "GithubActions",
+            "Docker",
+            "UV",
+            "Maven",
+            "Kubernetes",
+            "Proxmox",
+            "Terraform",
+            "AWS",
+            "Cloudflare",
+            "GoogleCloud"
+        ],
+        "Machine Learning": [
+            "TensorFlow",
+            "Keras",
+            "PyTorch",
+            "Scikit-learn",
+            "Pandas",
+            "NumPy"
+        ],
+        "Full Stack": [
+            "HTML",
+            "CSS",
+            "React",
+            "Svelte",
+            "Angular",
+            "Django",
+            "SpringBoot",
+            "FastAPI"
+        ],
+        "Data & Messaging": [
+            "PostgreSQL",
+            "MySQL",
+            "MongoDB",
+            "Redis",
+            "RabbitMQ",
+            "Zenoh",
+            "Kafka",
+            "MQTT",
+            "MPI"
+        ]
+    },
+    education: [
+        {
+            degree: "Masters",
+            area: "Computer Science and Engineering",
+            institution: "University of Aveiro",
+            date: "Sept 2023 to July 2025"
+        },
+        {
+            degree: "Bachelors",
+            area: "Computer Science and Engineering",
+            institution: "University of Aveiro",
+            date: "Sept 2020 to July 2023"
+        }
+    ]
+}

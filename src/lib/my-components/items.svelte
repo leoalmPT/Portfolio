@@ -8,7 +8,7 @@
     import Card from '$lib/my-components/card.svelte';
     import Results from '$lib/my-components/results.svelte';
     import { type Item } from "$lib/data/types";
-    import itemColors from "$lib/data/itemColors.json";
+    import { itemColors } from "$lib/data/misc";
 
     let {
         data,

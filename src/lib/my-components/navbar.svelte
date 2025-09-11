@@ -10,7 +10,8 @@
     import { toggleMode } from "mode-watcher";
     import { Button } from "$lib/components/ui/button/index.js";
 
-    import { name } from "$lib/data/home.json";
+    import { home } from "$lib/data/home";
+    const name = home.name;
     
     const record = [
         {

@@ -3,10 +3,9 @@
     import Autoplay from 'embla-carousel-autoplay';
     import { TypeWriter } from 'svelte-typewrite'
     import { fly } from 'svelte/transition';
-    import { Button } from "$lib/components/ui/button/index.js";
 
     import Logo from "$lib/my-components/logo.svelte";
-    import info from "$lib/data/home.json";
+    import { home } from "$lib/data/home";
 </script>
 
 <div class="xl:min-h-full xl:grid xl:grid-cols-8">
@@ -17,8 +16,8 @@
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 
-                src={info.image} 
-                alt={info.name} 
+                src={home.image} 
+                alt={home.name} 
                 class="object-cover opacity-0 transition-opacity duration-700 ease-in-out w-full"
                 onload={(e) => e.currentTarget.classList.remove('opacity-0')}
             />
@@ -28,7 +27,7 @@
             class="flex flex-wrap my-4 gap-x-2 gap-y-4 justify-center"
             in:fly|global={{ y: 100, duration: 500, delay: 100 }}
         >
-            {#each Object.entries(info.socials) as [name, href]}
+            {#each Object.entries(home.socials) as [name, href]}
                 <Logo name={name} href={href} new_window size={3}/>
             {/each}
         </div>
@@ -43,7 +42,7 @@
             I'm  
             <span class="text-primary">
                 <TypeWriter 
-                    texts={[info.name]} 
+                    texts={[home.name]} 
                     repeat={3}
                     endState={{
                         text: 'typed',
@@ -66,13 +65,13 @@
             class="text-3xl font-bold mt-4"
             in:fly|global={{ y: 100, duration: 500, delay: 300 }}
         >
-            {info.role}
+            {home.role}
         </div>
         <div 
             class="text-lg mt-4"
             in:fly|global={{ y: 100, duration: 500, delay: 400 }}
         >
-            {info.summary}
+            {home.summary}
         </div>
 
         <div
@@ -95,7 +94,7 @@
                 })]}
             >
                 <Carousel.Content>
-                    {#each Object.entries(info.skills) as [name, technologies]}
+                    {#each Object.entries(home.skills) as [name, technologies]}
                         <Carousel.Item>
                             <div class="text-3xl font-bold mb-4 mt-12">{name}</div>
                             <div 

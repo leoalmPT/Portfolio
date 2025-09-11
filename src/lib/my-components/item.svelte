@@ -19,7 +19,7 @@
     import { type Item as ItemType } from "$lib/data/types";
     import Error from '$lib/my-components/error.svelte';
     import Logo from '$lib/my-components/logo.svelte';
-    import itemColors from "$lib/data/itemColors.json";
+    import { itemColors } from "$lib/data/misc";
 
     let {
         data

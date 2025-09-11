@@ -29,15 +29,16 @@ Projects uni:
 <!-- - GIC - wesago -->
 <!-- - TQS - pickapoint -->
 <!-- - TPW - ezployee -->
-- IHC - campAndGo
+<!-- - IHC - campAndGo -->
 - IES - logipack
 - TPJ - 2d game
 
 Extras:
-- PDE portfolio
 - IA - rushour
-- TAI p1 - copymodel
+- BD - renthouse system
 - TAI p3 - shazam
+- PDE portfolio
+- TAI p1 - copymodel
 - TAA p1 - airline passenger
 - TAA p2 - image classification
 - FAA p1 - FL

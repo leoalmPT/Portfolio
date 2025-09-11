@@ -73,7 +73,7 @@ export const projects: Project[] = [
         description: "Web platform simulating a campsite booking experience, developed to learn about user personas and usability testing. It enables users to search for campsites, filter by various criteria.",
         skills: ["GithubActions", "React", "JavaScript", "Git", "HTML", "CSS"],
         content: campandgo
-    }
+    },
 ];
 
 projects.forEach(project => {
