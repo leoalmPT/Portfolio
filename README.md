@@ -30,7 +30,7 @@ Projects uni:
 <!-- - TQS - pickapoint -->
 <!-- - TPW - ezployee -->
 <!-- - IHC - campAndGo -->
-- IES - logipack
+<!-- - IES - logipack -->
 - TPJ - 2d game
 
 Extras:

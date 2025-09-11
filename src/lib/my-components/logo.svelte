@@ -49,7 +49,11 @@
             target={new_window ? "_blank" : undefined}
             rel={new_window ? "noopener noreferrer" : undefined}
         >
-            <img src={getSrc(name)} alt={name ? String(name) : undefined} />
+            <img 
+                src={getSrc(name)} 
+                alt={name ? String(name) : undefined} 
+                loading="lazy"
+            />
         </Button>
     </Tooltip.Trigger>
     {#if description}

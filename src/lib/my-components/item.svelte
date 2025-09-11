@@ -15,6 +15,8 @@
     import NotebookPen from "@lucide/svelte/icons/notebook-pen";
     import User from "@lucide/svelte/icons/user";
     import { fly } from 'svelte/transition';
+    import * as Dialog from "$lib/components/ui/dialog/index.js";
+    import { onMount } from 'svelte';
 
     import { type Item as ItemType } from "$lib/data/types";
     import Error from '$lib/my-components/error.svelte';
@@ -29,6 +31,21 @@
     const item = data.find((item: ItemType) => item.id === id);
     let color = $state("");
     if (item) color = itemColors[item.category as keyof typeof itemColors];
+
+    let open = $state(false);
+    let imageSrc = $state("");
+
+    onMount(() => {
+        const md = document.querySelector(".mymd");
+        if (!md) return;
+        md.querySelectorAll("img").forEach((img) => {
+            img.style.cursor = "pointer";
+            img.addEventListener("click", () => {
+                imageSrc = img.src;
+                open = true;
+            });
+        });
+    });
 </script>
 
 {#if item}
@@ -99,7 +116,7 @@
 
         <div in:fly|global={{ y: 100, duration: 500, delay: 200 }}>
             {#if item.content}
-                <div class="prose max-w-none dark:prose-invert prose-a:text-primary prose-img:rounded-lg prose-img:border-2 marker:text-foreground">
+                <div class="mymd prose max-w-none dark:prose-invert prose-a:text-primary prose-img:rounded-lg prose-img:border-2 marker:text-foreground">
                     <item.content />
                 </div>
             {:else}
@@ -110,3 +127,10 @@
 {:else}
     <Error />
 {/if}
+
+
+<Dialog.Root bind:open>
+    <Dialog.Content class="sm:max-w-[95%] md:max-w-[80%] border-2 border-primary">
+        <img src={imageSrc} alt="" class="bg-white" />
+    </Dialog.Content>
+</Dialog.Root>

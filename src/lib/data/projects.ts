@@ -9,6 +9,7 @@ import wesago from "$lib/md/projects/wesago.md";
 import pickapoint from "$lib/md/projects/pickapoint.md";
 import ezployee from "$lib/md/projects/ezployee.md";
 import campandgo from "$lib/md/projects/campandgo.md";
+import logipack from "$lib/md/projects/logipack.md";
 
 export const projects: Project[] = [
     {
@@ -74,6 +75,13 @@ export const projects: Project[] = [
         skills: ["GithubActions", "React", "JavaScript", "Git", "HTML", "CSS"],
         content: campandgo
     },
+    {
+        id: "logipack",
+        title: "LogiPack - Transport Management System",
+        description: "A multi-layered logistics management system designed for distributors, transporters, and clients. It provides real-time tracking and order management, improving efficiency and reducing costs.",
+        skills: ["GithubActions", "Docker", "Java", "SpringBoot", "Maven", "React", "JavaScript", "Python", "PostgreSQL", "MongoDB", "RabbitMQ", "Git", "HTML", "CSS"],
+        content: logipack
+    }
 ];
 
 projects.forEach(project => {
