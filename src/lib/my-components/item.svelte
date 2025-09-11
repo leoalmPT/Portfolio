@@ -130,7 +130,9 @@
 
 
 <Dialog.Root bind:open>
-    <Dialog.Content class="sm:max-w-[95%] md:max-w-[80%] border-2 border-primary">
-        <img src={imageSrc} alt="" class="bg-white" />
+    <Dialog.Content class="sm:max-w-[95%] md:max-w-[80%] max-h-screen border-2 border-primary">
+        <div class="flex items-center justify-center w-full h-full overflow-hidden">
+            <img src={imageSrc} alt="" class="max-w-full max-h-full object-contain bg-white" />
+        </div>
     </Dialog.Content>
 </Dialog.Root>
