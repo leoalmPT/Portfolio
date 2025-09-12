@@ -49,7 +49,7 @@
     import { Calendar } from "$lib/components/ui/calendar/index.js";
     import { fade } from 'svelte/transition';
 
-    import Input, { clearInput, setCaretNext, getCurrentHighlight } from "$lib/my-components/Input.svelte";
+    import Input, { clearInput, setCaretNext, getCaretPosition, getCurrentHighlight } from "$lib/my-components/Input.svelte";
     import { getSrc, getDescription } from "$lib/my-components/logo.svelte";
 
     let { 
@@ -180,11 +180,11 @@
 
     const setFilterValue = (value: string) => {
         const el = getCurrentHighlight();
-        if (el === null) return;
+        if (el === null || input === null) return;
+        const pos = getCaretPosition(input);
         el.innerText = el.innerText.split(":")[0] + ":" + value + "\u00A0";
         onMove();
-        if (input === null) return;
-        setCaretNext(input, 1);
+        setCaretNext(input, 1, pos);
         forceUpdate();
     };
 
@@ -197,9 +197,10 @@
 
     const onMenuClick = (opt: typeof menuOpts[number]) => {
         if (input === null) return;
+        const pos = getCaretPosition(input);
         selected = -1;
         input.innerText += (input.innerText.length > 0 ? " " : "") + opt.label;
-        setCaretNext(input);
+        setCaretNext(input, 0, pos);
         forceUpdate();
     }
 

@@ -39,8 +39,8 @@
     };
 
 
-    export const setCaretNext = (el: HTMLDivElement, offset=0) => {
-        const chars = getCaretPosition(el);
+    export const setCaretNext = (el: HTMLDivElement, offset=0, current_pos=0) => {
+        const chars = current_pos === 0 ? getCaretPosition(el) : current_pos;
         const text = el.innerText;
         const char = text[chars];
         let pos = chars;
