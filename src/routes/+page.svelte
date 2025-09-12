@@ -12,7 +12,7 @@
 
     <div class="col-span-3 xl:min-h-full flex flex-col items-center justify-center ">
         <div 
-            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden max-w-[300px] xl:max-w-[400px] mx-10"
+            class="aspect-square border-8 border-primary rounded-4xl overflow-hidden max-w-[300px] xl:max-w-[400px] mx-10 shadow-sm"
             in:fly|global={{ y: 100, duration: 500, delay: 0 }}
         >
             <img 

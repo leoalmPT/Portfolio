@@ -8,9 +8,9 @@
     export const getSrc = (name: string | undefined) => {
         if (!name) return undefined;
         if (iconData.dark.includes(name) && theme === 'dark') {
-            return `/icons/${name}-dark.svg`;
+            return `/icons/${name}-dark.png`;
         }
-        return `/icons/${name}.svg`;
+        return `/icons/${name}.png`;
     }
 
     export const getDescription = (name: string | undefined) => {
@@ -43,7 +43,7 @@
     <Tooltip.Trigger>
         <Button
             variant="outline"
-            class="p-0.5 flex items-center justify-center shadow-xl border-2 hover:!border-primary transition-transform duration-150 ease-in-out hover:scale-105"
+            class="p-0.5 flex items-center justify-center shadow-sm border-2 hover:!border-primary transition-transform duration-150 ease-in-out hover:scale-105"
             style="width: {size}rem; height: {size}rem;"
             href={href}
             target={new_window ? "_blank" : undefined}

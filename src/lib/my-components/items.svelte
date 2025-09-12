@@ -85,14 +85,15 @@
         in:fly|global={{ y: 100, duration: 500, delay: 100 }}
     >
         {#each Object.keys(categories) as category}
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 cursor-pointer">
                 <Switch
                     bind:checked={categories[category as CategoryKey]}
                     onCheckedChange={handleSwitch}
                     style={{ backgroundColor: categories[category as CategoryKey] ? `${itemColors[category as CategoryKey]} !important` : "" }}
                     id={category}
+                    class="cursor-pointer"
                 />
-                <Label for={category} class="text-lg">{filterNames[category as CategoryKey]}</Label>
+                <Label for={category} class="text-lg cursor-pointer">{filterNames[category as CategoryKey]}</Label>
             </div>
         {/each}
     </div>

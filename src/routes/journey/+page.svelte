@@ -71,14 +71,15 @@
     in:fly|global={{ y: 100, duration: 500, delay: 200 }}
 >
     {#each Object.keys(categories) as category}
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 cursor-pointer">
             <Switch
                 bind:checked={categories[category as CategoryKey]}
                 onCheckedChange={handleSwitch}
                 style={{ backgroundColor: categories[category as CategoryKey] ? `${itemColors[category as CategoryKey]} !important` : "" }}
                 id={category}
+                class="cursor-pointer"
             />
-            <Label for={category} class="text-lg">{filterNames[category as CategoryKey]}</Label>
+            <Label for={category} class="text-lg cursor-pointer">{filterNames[category as CategoryKey]}</Label>
         </div>
     {/each}
 
@@ -101,13 +102,20 @@
     </Tooltip.Provider>
 </div>
 
+<div 
+    class="text-center text-4xl font-bold mb-4"
+    in:fly|global={{ y: 100, duration: 500, delay: 300 }}
+>
+    Present
+</div>
+
 <Results bind:results >
     {#each results as item, index}
         <div class={`flex ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"}`}>
             {#key item.title + index}
                 <div 
                     class={`flex-1 flex justify-center w-full py-2 lg:p-10 ${index % 2 === 0 ? "lg:justify-end" : "lg:justify-start"}`}
-                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 500 : 100 * counter }}
+                    in:fly|global={{ y: 100, duration: 500, delay: first ? index * 100 + 700 : 100 * counter }}
                     onintrostart={() => counter += 1}
                 >
                     <Card {item} />
@@ -115,7 +123,7 @@
             {/key}
             <div 
                 class="border-2 border-primary hidden lg:inline relative"
-                in:slide|global={{ duration: 100, delay: first ? 400 + 100 * index : 100 * counter }}
+                in:slide|global={{ duration: 100, delay: first ? 500 + 100 * index : 100 * counter }}
             >
                 <div class={`absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 ${index % 2 === 0 ? "ml-[-20px]" : "ml-[20px] rotate-180"}`}>
                     <div class="border-t-10 border-b-10 border-r-20 border-t-transparent border-b-transparent border-r-primary"></div>

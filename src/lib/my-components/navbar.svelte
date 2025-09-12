@@ -38,7 +38,7 @@
 
 </script>
 
-<div class="w-full p-2 border-b-2 bg-background/50 backdrop-blur-md z-50">
+<div class="w-full p-2 dark:border-b-2 bg-background/50 backdrop-blur-md z-50 shadow-md">
     <div class="w-full container mx-auto">
         <NavigationMenu.Root class="w-full max-w-none" viewport={false}>
             <div class="w-full grid grid-cols-3">

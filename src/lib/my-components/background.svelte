@@ -51,4 +51,4 @@
         options={particlesConfig}
     />
 {/if}
-<div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] via-60% from-slate-50 via-cyan-50 to-blue-50 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950"></div>
+<div class="fixed z-[-2] h-full w-full bg-radial-[at_50%_90%] via-60% from-slate-50 via-blue-50 to-blue-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950"></div>

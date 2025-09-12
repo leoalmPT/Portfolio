@@ -39,7 +39,6 @@
         const md = document.querySelector(".mymd");
         if (!md) return;
         md.querySelectorAll("img").forEach((img) => {
-            img.style.cursor = "pointer";
             img.addEventListener("click", () => {
                 imageSrc = img.src;
                 open = true;
@@ -116,7 +115,7 @@
 
         <div in:fly|global={{ y: 100, duration: 500, delay: 200 }}>
             {#if item.content}
-                <div class="mymd prose max-w-none dark:prose-invert prose-a:text-primary prose-img:rounded-lg prose-img:border-2 marker:text-foreground">
+                <div class="mymd prose max-w-none dark:prose-invert prose-a:text-primary prose-img:rounded-lg prose-img:border-2 prose-img:cursor-pointer prose-img:shadow-sm marker:text-foreground">
                     <item.content />
                 </div>
             {:else}

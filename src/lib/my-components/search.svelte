@@ -5,28 +5,28 @@
     export const filter = (q: string, data: Array<any>, sortByMatch: boolean) => {
         const regex = new RegExp("\\b(?:before:|after:|tech:)[\\w\\-/]*", "g");
         const input = q.replaceAll(regex, " ").replaceAll(/\s+/g, " ").trim();
-        const before = q.match(/before:([\w\-\/]*)/)?.[1];
-        const after = q.match(/after:([\w\-\/]*)/)?.[1];
-        const tech = q.match(/tech:([\w\-\/]*)/)?.[1];
-        if (before) {
-            data = data.filter(item => {
-                return item.date ? new Date(item.date) < new Date(before) : true;
-            });
+        const beforeMatches = [...q.matchAll(/before:([\w\-\/]*)/g)].map(m => m[1]);
+        const afterMatches  = [...q.matchAll(/after:([\w\-\/]*)/g)].map(m => m[1]);
+        const techMatches   = [...q.matchAll(/tech:([\w\-\/]*)/g)].map(m => m[1]);
+        for (const before of beforeMatches) {
+            data = data.filter(item =>
+                item.date ? new Date(item.date) < new Date(before) : true
+            );
         }
-        if (after) {
-            data = data.filter(item => {
-                return item.date ? new Date(item.date) > new Date(after) : true;
-            });
+        for (const after of afterMatches) {
+            data = data.filter(item =>
+                item.date ? new Date(item.date) > new Date(after) : true
+            );
         }
-        if (tech) {
+        for (const tech of techMatches) {
             if (Skills.map(t => t.toLowerCase()).includes(tech.toLowerCase())) {
-                data = data.filter(item => {
-                    return item.skills?.map((t: string) => t.toLowerCase()).includes(tech.toLowerCase());
-                });
+                data = data.filter(item =>
+                    item.skills?.map((t: string) => t.toLowerCase()).includes(tech.toLowerCase())
+                );
             } else {
-                data = data.filter(item => {
-                    return item.skills?.some((t: string) => t.toLowerCase().includes(tech.toLowerCase()));
-                });
+                data = data.filter(item =>
+                    item.skills?.some((t: string) => t.toLowerCase().includes(tech.toLowerCase()))
+                );
             }
         }
         if (input === "") return data;
@@ -65,7 +65,7 @@
     let input = $state<HTMLDivElement | null>(null);
     let showCalendar = $state(false);
     let showTech = $state(false);
-    let showMenu = $derived(focused && q.length === 0);
+    let showMenu = $derived(focused);
     let calendarDate = $state(today(getLocalTimeZone()));
 
     const regex = new RegExp(`\\b(?:${filters.join("|")}):[\\w\\-/]*`, "g");
@@ -100,6 +100,9 @@
         }
         timeoutId = setTimeout(() => {
             query = value.replaceAll("\u00A0", " ").trim();
+            if (!showTech && !showCalendar){
+                showMenu = focused
+            }
         }, 500);
     };
 
@@ -147,14 +150,17 @@
     const handleHighlight = (el: HTMLElement) => {
         const text = el.innerText;
         if (text.includes("before:")) {
+            showMenu = false;
             calendarDate = today(getLocalTimeZone());
             showCalendar = true;
         }
         if (text.includes("after:")) {
+            showMenu = false;
             calendarDate = today(getLocalTimeZone()).subtract({ years: 5 });
             showCalendar = true;
         }
         if (text.includes("tech:")) {
+            showMenu = false;
             showTech = true;
             const skill = text.split("tech:")[1].trim();
             matchSkills = skill.length > 0 
@@ -165,6 +171,7 @@
 
 
     const onMove = () => {
+        showMenu = focused
         showCalendar = false;
         showTech = false;
         selected = -1;
