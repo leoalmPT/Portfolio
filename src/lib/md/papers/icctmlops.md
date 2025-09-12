@@ -1,6 +1,5 @@
 ## Overview
 
-<!-- TODO -->
 <span class="text-xl text-orange-300"> Paper not indexed yet. </span>
 
 [Paper](/files/papers/icctmlops2025/paper.pdf)

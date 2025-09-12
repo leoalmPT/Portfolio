@@ -10,6 +10,8 @@ import pickapoint from "$lib/md/projects/pickapoint.md";
 import ezployee from "$lib/md/projects/ezployee.md";
 import campandgo from "$lib/md/projects/campandgo.md";
 import logipack from "$lib/md/projects/logipack.md";
+import rngmon from "$lib/md/projects/rngmon.md";
+import portfolio from "$lib/md/projects/portfolio.md";
 
 export const projects: Project[] = [
     {
@@ -81,6 +83,21 @@ export const projects: Project[] = [
         description: "A multi-layered logistics management system designed for distributors, transporters, and clients. It provides real-time tracking and order management, improving efficiency and reducing costs.",
         skills: ["GithubActions", "Docker", "Java", "SpringBoot", "Maven", "React", "JavaScript", "Python", "PostgreSQL", "MongoDB", "RabbitMQ", "Git", "HTML", "CSS"],
         content: logipack
+    },
+    {
+        id: "rngmon",
+        title: "RNG Manipulation for Pokemon Emerald",
+        description: "A Lua script for mGBA that provides real-time Pokémon Emerald RNG manipulation assistance, featuring minimal overhead through heavy caching. It also retrieves usefull in-game information.",
+        skills: ["Lua", "Git"],
+        content: rngmon
+        
+    },
+    {
+        id: "portfolio",
+        title: "Personal Portfolio Website",
+        description: "A personal portfolio website built from scratch, designed to showcase projects, scientific research, professional experience, awards, certifications, and skills.",
+        skills: ["Cloudflare", "Svelte", "TypeScript", "JavaScript", "Git", "HTML", "CSS"],
+        content: portfolio
     }
 ];
 

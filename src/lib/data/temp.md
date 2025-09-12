@@ -7,7 +7,7 @@ Events:
 
 Projects:
 - portfolio
-- rng manipulation
+<!-- - rng manipulation -->
 - pxm-tools
 - background clicker
 - musicbot
