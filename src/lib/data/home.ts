@@ -9,7 +9,7 @@ export const home = {
         GitHub: "https://github.com/leoalmpt",
         ORCID: "https://orcid.org/0009-0006-5669-2378",
         ResearchGate: "https://www.researchgate.net/profile/Leonardo-Almeida-12",
-        cv: "/CV.pdf"
+        cv: "https://leoalmpt.github.io/CV"
     },
     skills: {
         "Programming Languages": [

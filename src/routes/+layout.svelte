@@ -36,7 +36,7 @@
 <ModeWatcher defaultMode={"dark"} />
 <Background />
 
-<div class="flex flex-col h-[100vh]">
+<div class="flex flex-col h-[100dvh]">
 	<Navbar />
 	<div 
 		class="flex-1 overflow-auto flex flex-col" 
