@@ -59,7 +59,7 @@ export const projects: Project[] = [
     {
         id: "pickapoint",
         title: "PickAPoint & PrintPlate - E-commerce deliveries and e-store platforms",
-        description: "It enables businesses to register as collection points, e-stores to manage orders and track status, and customers to receive SMS notifications and collect packages securely.",
+        description: "Multi-layered web platforms that enable businesses to register as collection points, e-stores to manage orders and track status, and customers to receive SMS notifications and collect packages securely.",
         skills: ["GoogleCloud", "Docker", "GithubActions", "Java", "SpringBoot", "Maven", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
         content: pickapoint
     },

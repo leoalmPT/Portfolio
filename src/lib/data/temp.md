@@ -6,7 +6,7 @@ Events:
 
 
 Projects:
-- portfolio
+<!-- - portfolio -->
 <!-- - rng manipulation -->
 - pxm-tools
 - background clicker

@@ -2,7 +2,7 @@ export const home = {
     name: "Leonardo Almeida",
     role: "Software Engineer",
     image: "/profile.png",
-    summary: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    summary: "Master's degree in Computer Science and Engineering, passionate about DevOps, software development and machine learning. My motivation comes from tackling complex technical challenges, applying a meticulous mindset to ensure high standards of quality. I am a dedicated professional who takes commitments seriously, genuinely enjoys the technical process, and is constantly seeking opportunities to learn, contribute, and make a meaningful impact.",
     socials: {
         email: "mailto:leonardoalmeida7777@gmail.com",
         LinkedIn: "https://www.linkedin.com/in/leoalmpt",

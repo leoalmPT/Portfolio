@@ -15,10 +15,10 @@ The portfolio is designed to offer a dynamic and intuitive browsing experience f
 **Content Organization:**
 My accomplishments are categorized into distinct sections, each with a clear purpose:
 
-*   **Projects:** "A collection of personal and collaborative software projects."
-*   **Scientific Research:** "Published papers and academic contributions."
-*   **Experience:** "Professional roles and internships where I applied and grew my skills."
-*   **Recognition:** "Awards and certifications that acknowledge my skills and contributions."
+*   **Projects:** A collection of personal and collaborative software projects.
+*   **Scientific Research:** Published papers and academic contributions.
+*   **Experience:** Professional roles and internships where I applied and grew my skills.
+*   **Recognition:** Awards and certifications that acknowledge my skills and contributions.
 
 **Powerful Search & Filtering:**
 A core feature is its highly robust search functionality, designed for efficient discovery of content:
@@ -26,9 +26,9 @@ A core feature is its highly robust search functionality, designed for efficient
 *   It implements a **fuzzy search** mechanism that intelligently matches queries even with typos or partial keywords.
 *   Users can refine their searches using specific filters:
     *   **tech:** Filter by technology (e.g., Python, Docker, AWS, etc.) — supported by **autocomplete** for ease of use.
-    *   **before:** Filter by date before (YYYY-MM-DD) — utilizing an interactive **calendar** for selection.
+    *   **before:** Filter by date before (YYYY-MM-DD) — using an interactive **calendar** for selection.
     *   **after:** Filter by date after (YYYY-MM-DD) — also with an interactive **calendar**.
 
 ## Final Thoughts
 
-This portfolio serves as a living document of my professional journey, demonstrating my technical skills in frontend development, UI/UX, and data presentation. Its sophisticated search and filtering capabilities, combined with a modern and interactive design, exemplify a commitment to user-friendly design and efficient information retrieval, allowing visitors to easily explore my work.
+This portfolio serves as a living document of my professional journey, demonstrating my technical skills, expertise, and growth. Its sophisticated search and filtering capabilities, combined with a modern and interactive design, exemplify a commitment to user-friendly design and efficient information retrieval, allowing visitors to easily explore my work.
