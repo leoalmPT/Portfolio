@@ -6,7 +6,7 @@ export const Skills = [
     // Programming Languages
     "Python", "Cpp", "Java", "JavaScript", "TypeScript", "Lua",
     // CI/CD & Cloud
-    "Git", "GithubActions", "Docker", "UV", "Maven", "Kubernetes", "Proxmox", "Terraform", "AWS", "Cloudflare", "GoogleCloud",
+    "Git", "GithubActions", "Docker", "Kubernetes", "Proxmox", "Terraform", "AWS", "Cloudflare", "GoogleCloud",
     // Machine Learning
     "TensorFlow", "Keras", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "OpenCV",
     // Full Stack

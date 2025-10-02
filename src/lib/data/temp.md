@@ -23,10 +23,10 @@ Projects uni:
 <!-- - TPW - ezployee -->
 <!-- - IHC - campAndGo -->
 <!-- - IES - logipack -->
-- TPJ - 2d game
+<!-- - TPJ - 2d game -->
 
 Projects extras:
-- IA - rushour
+<!-- - IA - rushour -->
 - BD - renthouse system
 - TAI p3 - shazam
 - PDE portfolio

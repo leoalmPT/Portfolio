@@ -1,8 +1,6 @@
 ## Overview
 
-<span class="text-xl text-orange-300"> Paper not indexed yet. </span>
-
-[Paper](/files/papers/icctmlops2025/paper.pdf)
+[Paper](/files/papers/icctmlops2025/paper.pdf) - [DOI](https://doi.org/10.1109/icct-europe63283.2025.11157658)
 
 This paper introduces an optimized task placement system for Machine Learning Operations (MLOps) pipelines, specifically designed to accelerate ML model development and deployment in heterogeneous computing environments.
 

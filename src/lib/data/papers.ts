@@ -8,6 +8,7 @@ import ficloud2024 from "$lib/md/papers/ficloud.md";
 import melecon2024 from "$lib/md/papers/melecon2024.md";
 import icctfl2025 from "$lib/md/papers/icctfl2025.md";
 import icctmlops2025 from "$lib/md/papers/icctmlops.md";
+import comcom2025 from "$lib/md/papers/comcom2025.md";
 
 export const papers: Paper[] = [
     {
@@ -18,6 +19,15 @@ export const papers: Paper[] = [
         description: "Implementation of a Federated Learning framework with multiple algorithms and communication protocols. Evaluation shows fault tolerance, efficient communication, and model convergence with worker failures.",
         authors: ["Leonardo Almeida", "Rafael Teixeira", "Gabriele Baldoni", "Mário Antunes", "Rui L. Aguiar"],
         content: sensors2025
+    },
+    {
+        id: "comcom2025",
+        title: "Beyond performance comparing the costs of applying Deep and Shallow Learning",
+        date: "2025-09",
+        publisher: "Computer Communications",
+        description: "Comparative study focusing on performance, time, energy, and explainability. Results show shallow models achieve comparable performance with up to 90% acceleration and lower resource consumption.",
+        authors: ["Rafael Teixeira", "Leonardo Almeida", "Pedro Rodrigues", "Mário Antunes", "Diogo Gomes", "Rui L. Aguiar"],
+        content: comcom2025
     },
     {
         id: "bigdata2025",
@@ -64,9 +74,6 @@ export const papers: Paper[] = [
         authors: ["Leonardo Almeida", "Pedro Rodrigues", "Rafael Teixeira", "Mário Antunes", "Rui L. Aguiar"],
         content: melecon2024
     },
-    //
-    // Not indexed papers
-    //
     {
         id: "icctfl2025",
         title: "Resilient Federated Learning Framework for 6G",

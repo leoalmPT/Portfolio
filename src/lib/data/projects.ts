@@ -12,13 +12,15 @@ import campandgo from "$lib/md/projects/campandgo.md";
 import logipack from "$lib/md/projects/logipack.md";
 import rngmon from "$lib/md/projects/rngmon.md";
 import portfolio from "$lib/md/projects/portfolio.md";
+import rushhour from "$lib/md/projects/rushhour.md";
+import firewater from "$lib/md/projects/firewater.md";
 
 export const projects: Project[] = [
     {
         id: "flexfl",
         title: "FlexFL - Resilient Federated Learning Framework",
         description: "Dissertation project that features a highly modular architecture with dynamic worker pool management and task rescheduling to ensure fault tolerance and continuous model convergence.",
-        skills: ["Proxmox", "Python", "UV", "Docker", "TensorFlow", "Keras", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Kafka", "MQTT", "Zenoh", "MPI", "Git"],
+        skills: ["Proxmox", "Python", "Docker", "TensorFlow", "Keras", "PyTorch", "Pandas", "NumPy", "Scikit-learn", "Kafka", "MQTT", "Zenoh", "MPI", "Git"],
         content: flexfl
     },
     {
@@ -60,7 +62,7 @@ export const projects: Project[] = [
         id: "pickapoint",
         title: "PickAPoint & PrintPlate - E-commerce deliveries and e-store platforms",
         description: "Multi-layered web platforms that enable businesses to register as collection points, e-stores to manage orders and track status, and customers to receive SMS notifications and collect packages securely.",
-        skills: ["GoogleCloud", "Docker", "GithubActions", "Java", "SpringBoot", "Maven", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
+        skills: ["GoogleCloud", "Docker", "GithubActions", "Java", "SpringBoot", "Svelte", "JavaScript", "PostgreSQL", "Git", "HTML", "CSS"],
         content: pickapoint
     },
     {
@@ -81,8 +83,22 @@ export const projects: Project[] = [
         id: "logipack",
         title: "LogiPack - Transport Management System",
         description: "A multi-layered logistics management system designed for distributors, transporters, and clients. It provides real-time tracking and order management, improving efficiency and reducing costs.",
-        skills: ["GithubActions", "Docker", "Java", "SpringBoot", "Maven", "React", "JavaScript", "Python", "PostgreSQL", "MongoDB", "RabbitMQ", "Git", "HTML", "CSS"],
+        skills: ["GithubActions", "Docker", "Java", "SpringBoot", "React", "JavaScript", "Python", "PostgreSQL", "MongoDB", "RabbitMQ", "Git", "HTML", "CSS"],
         content: logipack
+    },
+    {
+        id: "rushhour",
+        title: "RushHour - AI Agent",
+        description: "AI Agent developed in Python to solve the Rush Hour puzzle using optimized search algorithms (Uniform Cost Search and A* Search), featuring a dynamic cost function and a custom heuristic.",
+        skills: ["Python", "Git"],
+        content: rushhour
+    },
+    {
+        id: "firewater",
+        title: "FireBoy & WaterGirl - minigame",
+        description: "2D Co-operative Platformer Mini-game developed in Python using Pygame, emphasizing object-oriented and design patterns to create a modular, maintainable, and event-driven game architecture.",
+        skills: ["Python", "Git"],
+        content: firewater
     },
     {
         id: "rngmon",
