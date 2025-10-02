@@ -24,8 +24,6 @@ export const home = {
             "Git",
             "GithubActions",
             "Docker",
-            "UV",
-            "Maven",
             "Kubernetes",
             "Proxmox",
             "Terraform",
